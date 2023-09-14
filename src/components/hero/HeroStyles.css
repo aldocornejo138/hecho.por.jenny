@@ -1,0 +1,78 @@
+.backgroundMain {
+  text-align: center;
+  height: 100vh;
+  background-color: #000000;
+}
+.countiner-style {
+  height: 100vh;
+  position: relative;
+}
+
+.transparent-background {
+  width: 100%;
+  height: 15%;
+  position: absolute;
+  z-index: 998;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to top, rgba(255, 0, 0, 0), rgb(4, 3, 3));
+}
+
+.hero {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.description {
+  width: 500px;
+  position: absolute;
+  z-index: 999;
+  color: rgb(252, 252, 252);
+  top: 85%;
+  left: -1%;
+}
+
+.description h1 {
+  font-size: 40px;
+  color: #0095ff;
+  padding-left: 20px;
+}
+
+.description h2 {
+  font-size: 22px;
+  font: 12px "Helvetica Neue";
+  font: message-box;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  background: #fff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media screen and (max-width: 850px) {
+  .description {
+    width: 100%;
+    position: absolute;
+    z-index: 999;
+    color: aliceblue;
+    top: 90%;
+    left: -20%;
+  }
+
+  .description h1 {
+    font-size: 23px;
+  }
+  .description h2 {
+    font-size: 15px;
+  }
+}
