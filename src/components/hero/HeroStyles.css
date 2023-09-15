@@ -11,12 +11,16 @@
 
 .transparent-background {
   width: 100%;
-  height: 15%;
+  height: 100%;
   position: absolute;
-  z-index: 998;
+  z-index: 9;
   top: 0;
   left: 0;
-  background-image: linear-gradient(to top, rgba(255, 0, 0, 0), rgb(4, 3, 3));
+  background-image: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 0),
+    rgba(255, 0, 217, 0.15)
+  );
 }
 
 /* Add this CSS class for the filter effect */
@@ -42,7 +46,20 @@
   transform: translate(-50%, -50%);
   font-family: cursive; /* Use cursive font-family */
   font-size: 2rem; /* Adjust the font size as needed */
-  color: #ffffff; /* Text color */
+  color: #ffffff;
+  z-index: 10; /* Text color */
+}
+
+.semi-title {
+  text-align: center;
+  position: absolute;
+  top: 38%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: cursive; /* Use cursive font-family */
+  font-size: 1rem; /* Adjust the font size as needed */
+  color: #ffffff;
+  z-index: 10;
 }
 
 img {
@@ -68,7 +85,7 @@ img {
 }
 
 .description h2 {
-  font-size: 1.5rem; /* Use relative units for font size */
+  font-size: 2rem; /* Use relative units for font size */
   font-family: "Helvetica Neue", sans-serif;
 }
 
@@ -84,26 +101,17 @@ img {
   .title {
     text-align: center;
     position: absolute;
-    top: 20%;
+    top: 10%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-family: cursive; /* Use cursive font-family */
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     width: 400px; /* Adjust the font size as needed */
     color: #ffffff; /* Text color */
   }
-
-  .description {
-    width: 90%;
-    top: 90%;
-    left: 5%;
-  }
-
-  .description h1 {
-    font-size: 1.5rem;
-  }
-
-  .description h2 {
-    font-size: 1rem;
+  .semi-title {
+    top: 23%;
+    width: 400px;
+    font-size: 15px;
   }
 }

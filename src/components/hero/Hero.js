@@ -30,6 +30,7 @@ function Hero(props) {
   return (
     <div className="backgroundMain">
       <div className="countiner-style">
+        <div className="transparent-background"></div>
         <div style={bgImageStyle} className="image-filter-pinkish"></div>
         <div className="description">
           <div>
@@ -40,9 +41,11 @@ function Hero(props) {
 
         {/* Add the title in the middle */}
         <div className="title">
-          <h1>Hecho Por Jenny</h1>
+          <h1>HECHO POR JENNY</h1>
         </div>
-
+        <div className="semi-title">
+          <h1>COUTURE FLORAL</h1>
+        </div>
         {/* Render the Menu component */}
         <Menu />
       </div>
