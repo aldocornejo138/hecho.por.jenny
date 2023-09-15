@@ -3,7 +3,9 @@ import React from "react";
 import { useState, useEffect } from "react";
 import imageSlide from "./data";
 import "./HeroStyles.css"; // Import your CSS file
-import Menu from "../menu/Menu.js"; // Import the Menu component
+import Menu from "../menu/Menu.js";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 function Hero(props) {
   const [currentState, setCurrentState] = useState(0);
@@ -46,8 +48,25 @@ function Hero(props) {
         <div className="semi-title">
           <h1>Couture Floral</h1>
         </div>
-        {/* Render the Menu component */}
+
         <Menu />
+
+        <div className="social-icons">
+          <a
+            href="https://www.facebook.com/your-facebook-page"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon icon={faFacebook} className="icon" />
+          </a>
+          <a
+            href="https://www.instagram.com/your-instagram-page"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon icon={faInstagram} className="icon" />
+          </a>
+        </div>
       </div>
     </div>
   );

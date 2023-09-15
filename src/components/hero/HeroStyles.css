@@ -1,3 +1,5 @@
+@import "~font-awesome/css/font-awesome.min.css";
+
 .backgroundMain {
   text-align: center;
   height: 100vh;
@@ -95,6 +97,27 @@ img {
   background: #fff;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 50px;
+  z-index: 999;
+  position: absolute;
+  left: 150px;
+}
+
+.icon {
+  font-size: 34px;
+  margin: 0 10px;
+  color: rgb(255, 255, 255); /* Set icon color to white */
+}
+
+.icon:hover {
+  color: #d400ff;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 850px) {
