@@ -1,6 +1,9 @@
-import "./HeroStyles.css";
+// Hero.js
+import React from "react";
 import { useState, useEffect } from "react";
 import imageSlide from "./data";
+import "./HeroStyles.css"; // Import your CSS file
+import Menu from "../menu/Menu.js"; // Import the Menu component
 
 function Hero(props) {
   const [currentState, setCurrentState] = useState(0);
@@ -20,27 +23,31 @@ function Hero(props) {
     backgroundPosition: "center",
     backgroundSize: "cover",
     height: "100%",
-    weight: "100%",
+    width: "100%",
     transition: "background-image 1s ease",
   };
 
   return (
     <div className="backgroundMain">
       <div className="countiner-style">
-        <div style={bgImageStyle}></div>
+        <div style={bgImageStyle} className="image-filter-pinkish"></div>
         <div className="description">
           <div>
             <h2>{imageSlide[currentState].title}</h2>
             <h1>{imageSlide[currentState].body}</h1>
           </div>
         </div>
-        <div className="transparent-background"></div>
-        <div className="hero-text">
-          <h1>{props.title}</h1>
-          <p>{props.text}</p>
+
+        {/* Add the title in the middle */}
+        <div className="title">
+          <h1>Hecho Por Jenny</h1>
         </div>
+
+        {/* Render the Menu component */}
+        <Menu />
       </div>
     </div>
   );
 }
+
 export default Hero;

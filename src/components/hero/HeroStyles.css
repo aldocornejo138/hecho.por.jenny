@@ -3,6 +3,7 @@
   height: 100vh;
   background-color: #000000;
 }
+
 .countiner-style {
   height: 100vh;
   position: relative;
@@ -18,10 +19,30 @@
   background-image: linear-gradient(to top, rgba(255, 0, 0, 0), rgb(4, 3, 3));
 }
 
+/* Add this CSS class for the filter effect */
+.image-filter {
+  filter: brightness(0.7); /* You can adjust the brightness value as needed */
+}
+/* Add this CSS class for the pinkish filter effect */
+.image-filter-pinkish {
+  filter: brightness(1); /* Adjust values as needed */
+}
+
 .hero {
   width: 100%;
   height: 100%;
   position: relative;
+}
+
+.title {
+  text-align: center;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: cursive; /* Use cursive font-family */
+  font-size: 2rem; /* Adjust the font size as needed */
+  color: #ffffff; /* Text color */
 }
 
 img {
@@ -31,24 +52,24 @@ img {
 }
 
 .description {
-  width: 500px;
+  max-width: 80%; /* Adjust as needed */
   position: absolute;
   z-index: 999;
   color: rgb(252, 252, 252);
   top: 85%;
-  left: -1%;
+  left: 10%; /* Adjust for centering */
+  transform: translateX(-50%); /* Center horizontally */
 }
 
 .description h1 {
-  font-size: 40px;
+  font-size: 2.5rem; /* Use relative units like rem for font size */
   color: #0095ff;
-  padding-left: 20px;
+  padding-left: 1rem; /* Use relative units for spacing */
 }
 
 .description h2 {
-  font-size: 22px;
-  font: 12px "Helvetica Neue";
-  font: message-box;
+  font-size: 1.5rem; /* Use relative units for font size */
+  font-family: "Helvetica Neue", sans-serif;
 }
 
 .hero-text h1 {
@@ -60,19 +81,29 @@ img {
 }
 
 @media screen and (max-width: 850px) {
-  .description {
-    width: 100%;
+  .title {
+    text-align: center;
     position: absolute;
-    z-index: 999;
-    color: aliceblue;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: cursive; /* Use cursive font-family */
+    font-size: 1.5rem;
+    width: 120%; /* Adjust the font size as needed */
+    color: #ffffff; /* Text color */
+  }
+
+  .description {
+    width: 90%;
     top: 90%;
-    left: -20%;
+    left: 5%;
   }
 
   .description h1 {
-    font-size: 23px;
+    font-size: 1.5rem;
   }
+
   .description h2 {
-    font-size: 15px;
+    font-size: 1rem;
   }
 }

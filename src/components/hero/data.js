@@ -24,10 +24,5 @@ const imageSlide = [
     title: "",
     body: "",
   },
-  {
-    url: "pic-6.jpg",
-    title: "",
-    body: "",
-  },
 ];
 export default imageSlide;
