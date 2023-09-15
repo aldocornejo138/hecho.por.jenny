@@ -101,7 +101,7 @@ img {
   .title {
     text-align: center;
     position: absolute;
-    top: 20%;
+    top: 15%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-family: cursive; /* Use cursive font-family */
@@ -110,7 +110,7 @@ img {
     color: #ffffff; /* Text color */
   }
   .semi-title {
-    top: 33%;
+    top: 27%;
     width: 400px;
     font-size: 15px;
   }
