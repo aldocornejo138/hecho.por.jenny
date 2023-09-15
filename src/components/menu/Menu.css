@@ -46,7 +46,7 @@
 /* Media query for screens with a maximum width of 850px */
 @media screen and (max-width: 850px) {
   .menu-container {
-    margin-top: 100px;
+    margin-top: 80px;
   }
   .menu-list {
     flex-direction: column; /* Display menu options in a column for smaller screens */
