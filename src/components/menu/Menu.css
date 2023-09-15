@@ -4,7 +4,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: rgba(0, 0, 0, 0.06);
+  background-color: rgba(0, 0, 0, 0.248);
   border: 1px solid black;
   padding: 20px;
   text-align: center;
@@ -48,8 +48,7 @@
     flex-direction: column; /* Display menu options in a column for smaller screens */
     margin-right: 0; /* Remove margin between items in a column */
     text-align: center;
-    width: 300px;
-    background-color: #38373841; /* Center items in a column */
+    width: 300px; /* Center items in a column */
   }
 
   .menu-list li {
