@@ -89,7 +89,7 @@ img {
     transform: translate(-50%, -50%);
     font-family: cursive; /* Use cursive font-family */
     font-size: 1.5rem;
-    width: 120%; /* Adjust the font size as needed */
+    width: 400px; /* Adjust the font size as needed */
     color: #ffffff; /* Text color */
   }
 
