@@ -51,6 +51,7 @@ function Hero(props) {
 
         <Menu />
 
+        {/* Center the social icons */}
         <div className="social-icons">
           <a
             href="https://www.facebook.com/your-facebook-page"

@@ -4,7 +4,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: rgba(0, 0, 0, 0.154);
+  background-color: rgba(0, 0, 0, 0);
   border: 1px solid black;
   padding: 20px;
   text-align: center;
@@ -59,5 +59,9 @@
     margin-right: 0; /* Remove margin between items in a column */
     margin-bottom: 35px;
     margin-top: 15px; /* Add spacing between rows in a column */
+  }
+
+  .menu-list a {
+    font-size: 25px;
   }
 }

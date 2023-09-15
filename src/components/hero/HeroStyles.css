@@ -101,14 +101,13 @@ img {
 
 .social-icons {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  bottom: 50px;
+  justify-content: center; /* Horizontally center the icons */
+  align-items: center; /* Vertically center the icons */
+  bottom: 70px;
   z-index: 999;
   position: absolute;
-  left: 150px;
+  width: 100%; /* Make it span the full width */
 }
-
 .icon {
   font-size: 34px;
   margin: 0 10px;
@@ -136,5 +135,8 @@ img {
     top: 22%;
     width: 400px;
     font-size: 15px;
+  }
+  .social-icons {
+    bottom: 140px;
   }
 }
