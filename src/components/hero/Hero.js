@@ -41,10 +41,10 @@ function Hero(props) {
 
         {/* Add the title in the middle */}
         <div className="title">
-          <h1>HECHO POR JENNY</h1>
+          <h1>Hecho Por Jenny</h1>
         </div>
         <div className="semi-title">
-          <h1>COUTURE FLORAL</h1>
+          <h1>Couture Floral</h1>
         </div>
         {/* Render the Menu component */}
         <Menu />
