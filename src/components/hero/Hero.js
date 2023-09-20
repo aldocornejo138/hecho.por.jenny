@@ -39,13 +39,37 @@ function Hero(props) {
             <h1>{imageSlide[currentState].body}</h1>
           </div>
         </div>
-
-        {/* Add the title in the middle */}
         <div className="title">
           <h1>Hecho Por Jenny</h1>
         </div>
 
-        {/* Add the SVG line below the title */}
+        <div className="svg-line-container">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="800"
+            height="100"
+            version="1.1"
+          >
+            <path
+              d="M 0 40 
+         C 50 10 50 90 100 40
+         C 150 -10 150 110 200 40"
+              fill="none"
+              stroke="#ff33cc"
+              stroke-width="2"
+            >
+              <animate
+                attributeName="d"
+                from="M 0 40 C 50 10 50 90 100 40 C 150 -10 150 110 200 40"
+                to="M 0 40 C 30 10 30 90 60 40 C 90 -10 90 110 120 40"
+                dur="2s"
+                repeatCount="indefinite"
+              />
+            </path>
+          </svg>
+        </div>
+
+        {/* SVG line right under the title 
         <div className="svg-line-container">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -54,22 +78,20 @@ function Hero(props) {
             version="1.1"
           >
             <path
-              d="M30,100 Q070,170 170,120 T350,150"
+              d="M10,100 Q70,170 150,115 T400,150"
               fill="none"
               stroke="#ff33cc"
               stroke-width="2"
             />
           </svg>
         </div>
+  */}
 
         {/* SVG line right under the title */}
-
         <div className="semi-title">
           <h1>Couture Floral</h1>
         </div>
-
         <Menu />
-
         {/* Center the social icons */}
         <div className="social-icons">
           <a

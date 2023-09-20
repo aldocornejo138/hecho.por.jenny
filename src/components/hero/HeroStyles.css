@@ -44,7 +44,7 @@
 .title {
   text-align: center;
   position: absolute;
-  top: 30%;
+  top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: cursive;
@@ -57,15 +57,15 @@
 .svg-line-container {
   text-align: center;
   position: absolute;
-  top: 14%; /* Adjust the vertical position as needed */
-  left: 53%;
-  transform: translate(-50%, -50%);
+  top: 20%; /* Adjust the vertical position as needed */
+  left: 85%; /* Center horizontally */
+  transform: translateX(-50%);
   width: 100%;
   color: pink; /* Make it span the full width */
 }
 
 /* Styling for the SVG line */
-.svg-line path {
+.svg-line-container svg path {
   stroke-dasharray: 100 200;
   stroke-dashoffset: -100;
   animation: dash 5s linear infinite;
@@ -164,6 +164,11 @@ img {
     font-size: 17px;
   }
   .social-icons {
-    bottom: 120px;
+    bottom: 130px;
+  }
+
+  .svg-line-container {
+    top: 10%;
+    left: 83%;
   }
 }
