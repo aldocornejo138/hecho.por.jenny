@@ -21,7 +21,7 @@
   flex-direction: row; /* Display menu options in a row by default */
   flex-wrap: wrap; /* Allow multiple rows for smaller screens */
   justify-content: center;
-  width: 1000px; /* Center the items horizontally */
+  width: 1300px; /* Center the items horizontally */
 }
 
 .menu-list li {
@@ -40,7 +40,9 @@
 
 .menu-list a:hover {
   color: #f7007c; /* Change text color on hover (pinkish color) */
-  cursor: pointer; /* Show pointer cursor on hover */
+  cursor: pointer;
+  font-size: 35px;
+  transition: font-size 0.5s;
 }
 
 /* Media query for screens with a maximum width of 850px */
@@ -57,7 +59,7 @@
 
   .menu-list li {
     margin-right: 0; /* Remove margin between items in a column */
-    margin-bottom: 35px;
+    margin-bottom: 30px;
     margin-top: 15px; /* Add spacing between rows in a column */
   }
 

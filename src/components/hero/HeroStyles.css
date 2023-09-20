@@ -51,7 +51,35 @@
   color: #ffffff;
   z-index: 10; /* Text color */
 }
+/* ... Your existing CSS code ... */
 
+/* Add this CSS class for the underline animation */
+.title h1::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px; /* Adjust the height of the underline as needed */
+  background-color: #ff00aa; /* Replace with your desired color */
+  position: absolute;
+  bottom: 42px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: underlineLoop 3s linear infinite; /* Adjust the duration and timing as needed */
+  font-family: cursive; /* Use cursive font-family */
+}
+
+/* Define the animation for the underline */
+@keyframes underlineLoop {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
 .semi-title {
   text-align: center;
   position: absolute;
@@ -137,6 +165,6 @@ img {
     font-size: 17px;
   }
   .social-icons {
-    bottom: 110px;
+    bottom: 120px;
   }
 }
