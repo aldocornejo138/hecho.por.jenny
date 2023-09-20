@@ -1,4 +1,3 @@
-// Hero.js
 import React from "react";
 import { useState, useEffect } from "react";
 import imageSlide from "./data";
@@ -45,6 +44,26 @@ function Hero(props) {
         <div className="title">
           <h1>Hecho Por Jenny</h1>
         </div>
+
+        {/* Add the SVG line below the title */}
+        <div className="svg-line-container">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="800"
+            height="200"
+            version="1.1"
+          >
+            <path
+              d="M30,100 Q070,170 170,120 T350,150"
+              fill="none"
+              stroke="#ff33cc"
+              stroke-width="2"
+            />
+          </svg>
+        </div>
+
+        {/* SVG line right under the title */}
+
         <div className="semi-title">
           <h1>Couture Floral</h1>
         </div>
