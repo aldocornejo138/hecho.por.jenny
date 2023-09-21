@@ -52,7 +52,7 @@ function Hero(props) {
           >
             <path id="textPath" d="M 10 50 H 400" fill="transparent" />
             <text className="cursive-text">
-              <textPath href="#textPath">Couture Floral</textPath>
+              <textPath href="#textPath">Hecho Por Jenny</textPath>
             </text>
           </svg>
         </div>
@@ -76,7 +76,9 @@ function Hero(props) {
   */}
 
         {/* SVG line right under the title */}
-
+        <div className="semi-title">
+          <h1>Couture Floral</h1>
+        </div>
         <Menu />
         {/* Center the social icons */}
         <div className="social-icons">
