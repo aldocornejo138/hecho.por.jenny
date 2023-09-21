@@ -46,26 +46,14 @@ function Hero(props) {
         <div className="svg-line-container">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="800"
+            width="400"
             height="100"
             version="1.1"
           >
-            <path
-              d="M 0 40 
-         C 50 10 50 90 100 40
-         C 150 -10 150 110 200 40"
-              fill="none"
-              stroke="#ff33cc"
-              stroke-width="2"
-            >
-              <animate
-                attributeName="d"
-                from="M 0 40 C 50 10 50 90 100 40 C 150 -10 150 110 200 40"
-                to="M 0 40 C 30 10 30 90 60 40 C 90 -10 90 110 120 40"
-                dur="2s"
-                repeatCount="indefinite"
-              />
-            </path>
+            <path id="textPath" d="M 10 50 H 400" fill="transparent" />
+            <text className="cursive-text">
+              <textPath href="#textPath">Hecho Por Jenny</textPath>
+            </text>
           </svg>
         </div>
 
