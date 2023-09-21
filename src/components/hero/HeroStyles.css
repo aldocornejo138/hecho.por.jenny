@@ -67,9 +67,9 @@
 
 .cursive-text {
   font-family: cursive;
-  font-size: 50px;
+  font-size: 40px;
   fill: transparent;
-  stroke: rgb(246, 0, 196);
+  stroke: rgb(245, 109, 255);
   stroke-width: 2;
   animation: draw 8s linear infinite;
 }
@@ -174,7 +174,7 @@ img {
   }
 
   .svg-line-container {
-    top: 14%;
-    left: 53%;
+    top: 24%;
+    left: 69%;
   }
 }
