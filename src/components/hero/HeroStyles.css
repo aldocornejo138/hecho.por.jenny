@@ -71,7 +71,7 @@
   fill: transparent;
   stroke: rgba(255, 0, 204, 0.543);
   stroke-width: 2;
-  animation: draw 8s linear infinite;
+  animation: draw 16s linear infinite;
 }
 
 @keyframes draw {
@@ -174,7 +174,7 @@ img {
   }
 
   .svg-line-container {
-    top: 13%;
+    top: 12%;
     left: 53%;
   }
 }
