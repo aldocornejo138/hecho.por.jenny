@@ -57,7 +57,7 @@
 
 /* CSS for styling the SVG path and container */
 .svg-line-container {
-  width: 100%; /* Adjust the width as needed */
+  width: 90%; /* Adjust the width as needed */
   height: auto; /* Allow the SVG to scale proportionally based on the container width */
   position: absolute;
   top: 22%; /* Position the SVG line vertically in the middle */
@@ -71,7 +71,7 @@
   width: 70%; /* Adjust the width as needed */
   height: auto; /* Allow the SVG to scale proportionally based on the container width */
   position: absolute;
-  stroke: rgba(251, 0, 255, 0.471);
+  stroke: rgba(251, 0, 255, 0.427);
   top: 15%; /* Position the SVG line vertically in the middle */
   left: 43.5%; /* Position the SVG line horizontally in the middle */
   transform: translate(-50%, -50%); /* Center the SVG line */
