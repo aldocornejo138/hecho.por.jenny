@@ -60,14 +60,26 @@
   width: 100%; /* Adjust the width as needed */
   height: auto; /* Allow the SVG to scale proportionally based on the container width */
   position: absolute;
-  top: 50%; /* Position the SVG line vertically in the middle */
-  left: 50%; /* Position the SVG line horizontally in the middle */
+  top: 22%; /* Position the SVG line vertically in the middle */
+  left: 47%; /* Position the SVG line horizontally in the middle */
+  transform: translate(-50%, -50%); /* Center the SVG line */
+}
+
+.svg-flower {
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* Adjust the width as needed */
+  height: auto; /* Allow the SVG to scale proportionally based on the container width */
+  position: absolute;
+  stroke: rgba(235, 86, 255, 0.512);
+  top: 15%; /* Position the SVG line vertically in the middle */
+  left: 59%; /* Position the SVG line horizontally in the middle */
   transform: translate(-50%, -50%); /* Center the SVG line */
 }
 
 .cursive-text {
   font-family: cursive;
-  font-size: 50px;
+  font-size: 4rem;
   fill: transparent;
   stroke: rgba(255, 0, 204, 0.543);
   stroke-width: 2;
@@ -115,7 +127,7 @@ img {
 
 .description h1 {
   font-size: 2.5rem; /* Use relative units like rem for font size */
-  color: #0095ff;
+  color: #ff00d9;
   padding-left: 1rem; /* Use relative units for spacing */
 }
 
@@ -176,5 +188,8 @@ img {
   .svg-line-container {
     top: 12%;
     left: 53%;
+  }
+  .cursive-text {
+    font-size: 50px;
   }
 }

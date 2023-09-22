@@ -57,25 +57,46 @@ function Hero(props) {
           </svg>
         </div>
 
-        {/* SVG line right under the title 
-        <div className="svg-line-container">
+        <div className="svg-flower">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="800"
-            height="200"
+            width="400"
+            height="40"
             version="1.1"
           >
             <path
-              d="M10,100 Q70,170 150,115 T400,150"
+              id="line"
+              d="M 10 20 C 100 5, 150 35, 350 20"
               fill="none"
-              stroke="#ff33cc"
-              stroke-width="2"
-            />
+              stroke-width="4"
+              stroke-dasharray="200 300"
+            >
+              <animate
+                attributeName="stroke-dashoffset"
+                from="0"
+                to="500"
+                dur="8s"
+                repeatCount="indefinite"
+              />
+            </path>
+            <path
+              id="inverseLine"
+              d="M 350 20 C 250 35, 200 5, 10 20"
+              fill="none"
+              stroke-width="4"
+              stroke-dasharray="200 300"
+            >
+              <animate
+                attributeName="stroke-dashoffset"
+                from="-500"
+                to="0"
+                dur="8s"
+                repeatCount="indefinite"
+              />
+            </path>
           </svg>
         </div>
-  */}
 
-        {/* SVG line right under the title */}
         <div className="semi-title">
           <h1>Couture Floral</h1>
         </div>
