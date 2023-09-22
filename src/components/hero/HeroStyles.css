@@ -68,12 +68,12 @@
 .svg-flower {
   display: flex;
   flex-direction: column;
-  width: 70%; /* Adjust the width as needed */
+  width: 60%; /* Adjust the width as needed */
   height: auto; /* Allow the SVG to scale proportionally based on the container width */
   position: absolute;
   stroke: rgba(251, 0, 255, 0.427);
-  top: 15%; /* Position the SVG line vertically in the middle */
-  left: 43.5%; /* Position the SVG line horizontally in the middle */
+  top: 24%; /* Position the SVG line vertically in the middle */
+  left: 69.5%; /* Position the SVG line horizontally in the middle */
   transform: translate(-50%, -50%); /* Center the SVG line */
 }
 
@@ -164,6 +164,24 @@ img {
   cursor: pointer;
 }
 
+.creator {
+  display: flex;
+  justify-content: center; /* Horizontally center the icons */
+  align-items: center; /* Vertically center the icons */
+  bottom: 110px;
+  left: 30%;
+  z-index: 999;
+  position: absolute;
+  width: 100%;
+  font-size: 10px;
+  text-decoration: none;
+}
+
+.creator a {
+  text-decoration: none;
+  color: #ff00f2b0;
+}
+
 @media screen and (max-width: 850px) {
   .title {
     text-align: center;
@@ -191,5 +209,10 @@ img {
   }
   .cursive-text {
     font-size: 50px;
+  }
+  .svg-flower {
+    top: 15%; /* Position the SVG line vertically in the middle */
+    left: 38%; /* Position the SVG line horizontally in the middle */
+    width: 60%;
   }
 }
