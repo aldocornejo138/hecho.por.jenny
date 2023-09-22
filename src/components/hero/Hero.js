@@ -117,14 +117,14 @@ function Hero(props) {
         {/* Center the social icons */}
         <div className="social-icons">
           <a
-            href="https://www.facebook.com/your-facebook-page"
+            href="https://www.instagram.com/hecho.por.jenny/"
             target="_blank"
             rel="noopener noreferrer"
           >
             <FontAwesomeIcon icon={faFacebook} className="icon" />
           </a>
           <a
-            href="https://www.instagram.com/your-instagram-page"
+            href="https://www.instagram.com/hecho.por.jenny/"
             target="_blank"
             rel="noopener noreferrer"
           >

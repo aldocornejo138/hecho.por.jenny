@@ -148,7 +148,7 @@ img {
   left: 0%;
   z-index: 9;
   position: absolute;
-  width: 98%;
+  width: 100%;
   font-size: 7px;
   border-top: 1px solid #ffffff84; /* Line dividing the top of the section */
   color: #fff;
@@ -164,13 +164,13 @@ img {
 .left-content {
   flex: 2; /* Occupy 50% of the available space */
   text-align: left;
-  padding-left: 25px;
+  padding-left: 35px;
 }
 
 .right-content {
   flex: 1; /* Occupy 50% of the available space */
   text-align: right;
-  padding-right: 30px;
+  padding-right: 40px;
 }
 
 .right-content a {
