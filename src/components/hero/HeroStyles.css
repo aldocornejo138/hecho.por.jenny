@@ -119,13 +119,13 @@ img {
   display: flex;
   justify-content: center; /* Horizontally center the icons */
   align-items: center; /* Vertically center the icons */
-  bottom: 70px;
-  z-index: 999;
+  bottom: 400px;
+  z-index: 10;
   position: absolute;
   width: 100%; /* Make it span the full width */
 }
 .icon {
-  font-size: 34px;
+  font-size: 50px;
   margin: 0 10px;
   color: rgb(255, 255, 255); /* Set icon color to white */
 }
@@ -133,6 +133,7 @@ img {
 .icon:hover {
   color: #d400ff;
   cursor: pointer;
+  font-size: 55px;
 }
 
 .creator a {
@@ -145,12 +146,13 @@ img {
 .footer {
   bottom: 0px;
   left: 0%;
-  z-index: 999;
+  z-index: 9;
   position: absolute;
   width: 98%;
-  font-size: 8px;
-  border-top: 1px solid #fff; /* Line dividing the top of the section */
-  color: #fff; /* Text color for the footer content */
+  font-size: 7px;
+  border-top: 1px solid #ffffff84; /* Line dividing the top of the section */
+  color: #fff;
+  padding-top: -10px; /* Text color for the footer content */
 }
 
 .footer-content {
@@ -160,15 +162,15 @@ img {
 }
 
 .left-content {
-  flex: 1; /* Occupy 50% of the available space */
+  flex: 2; /* Occupy 50% of the available space */
   text-align: left;
-  padding-left: 10px;
+  padding-left: 25px;
 }
 
 .right-content {
   flex: 1; /* Occupy 50% of the available space */
   text-align: right;
-  padding-right: 10px;
+  padding-right: 30px;
 }
 
 .right-content a {
@@ -176,6 +178,11 @@ img {
   color: rgba(225, 40, 216, 0.628);
   font-size: 10px;
   font-family: cursive;
+}
+
+.right-content a:hover {
+  font-size: 11px;
+  color: rgb(255, 0, 255);
 }
 
 @media screen and (max-width: 850px) {
@@ -194,6 +201,10 @@ img {
     top: 18%;
     width: 400px;
     font-size: 17px;
+  }
+
+  .icon {
+    font-size: 45px;
   }
   .social-icons {
     bottom: 150px;
