@@ -222,4 +222,12 @@ img {
     left: 38%; /* Position the SVG line horizontally in the middle */
     width: 60%;
   }
+
+  .left-content {
+    padding-left: 30px;
+  }
+
+  .right-content {
+    padding-right: 35px;
+  }
 }
