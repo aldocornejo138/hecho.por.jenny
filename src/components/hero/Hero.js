@@ -131,15 +131,23 @@ function Hero(props) {
             <FontAwesomeIcon icon={faInstagram} className="icon" />
           </a>
         </div>
-        <div className="creator">
-          <a
-            href="https://aldahir-cornejo-portfolio.vercel.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h1>Site Creator</h1>
-          </a>
-        </div>
+
+        <footer className="footer">
+          <div className="footer-content">
+            <div className="left-content">
+              <h1>Hecho Por Jenny &copy; 2023</h1>
+            </div>
+            <div className="right-content">
+              <a
+                href="https://aldahir-cornejo-portfolio.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <h1>Site Design</h1>
+              </a>
+            </div>
+          </div>
+        </footer>
       </div>
     </div>
   );
