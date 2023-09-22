@@ -52,7 +52,17 @@ function Hero(props) {
           >
             <path id="textPath" d="M 10 50 H 400" fill="transparent" />
             <text className="cursive-text">
-              <textPath href="#textPath">Hecho Por Jenny</textPath>
+              <textPath href="#textPath">
+                <animateMotion repeatCount="indefinite">
+                  <mpath
+                    href="#textPath"
+                    keyPoints="0;1;0"
+                    keyTimes="0;0.5;1"
+                    dur="4s"
+                  />
+                </animateMotion>
+                Hecho Por Jenny
+              </textPath>
             </text>
           </svg>
         </div>
@@ -68,8 +78,10 @@ function Hero(props) {
               id="line"
               d="M 10 20 C 100 5, 150 35, 350 20"
               fill="none"
-              stroke-width="4"
+              stroke="#FF3366"
+              stroke-width="3.5"
               stroke-dasharray="200 300"
+              stroke-linecap="round"
             >
               <animate
                 attributeName="stroke-dashoffset"
@@ -79,12 +91,15 @@ function Hero(props) {
                 repeatCount="indefinite"
               />
             </path>
+
             <path
               id="inverseLine"
               d="M 350 20 C 250 35, 200 5, 10 20"
               fill="none"
+              stroke="#FF3366"
               stroke-width="4"
               stroke-dasharray="200 300"
+              stroke-linecap="round"
             >
               <animate
                 attributeName="stroke-dashoffset"
