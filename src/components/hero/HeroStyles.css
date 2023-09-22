@@ -68,12 +68,12 @@
 .svg-flower {
   display: flex;
   flex-direction: column;
-  width: 80%; /* Adjust the width as needed */
+  width: 70%; /* Adjust the width as needed */
   height: auto; /* Allow the SVG to scale proportionally based on the container width */
   position: absolute;
   stroke: rgba(235, 86, 255, 0.512);
   top: 15%; /* Position the SVG line vertically in the middle */
-  left: 48.5%; /* Position the SVG line horizontally in the middle */
+  left: 43.5%; /* Position the SVG line horizontally in the middle */
   transform: translate(-50%, -50%); /* Center the SVG line */
 }
 
@@ -81,7 +81,7 @@
   font-family: cursive;
   font-size: 4rem;
   fill: transparent;
-  stroke: rgba(255, 0, 204, 0.543);
+  stroke: rgba(255, 0, 204, 0);
   stroke-width: 2;
   animation: draw 16s linear infinite;
 }
