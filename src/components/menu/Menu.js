@@ -1,22 +1,23 @@
 // Menu.js
 import React from "react";
 import "./Menu.css"; // Import your CSS file
+import { Link } from "react-router-dom";
 
 function Menu() {
   return (
     <div className="menu-container">
       <ul className="menu-list">
         <li>
-          <a href="#">Custom Bouquets</a>
+          <Link to="./CustomBouquets">Custom Bouquets</Link>
         </li>
         <li>
-          <a href="#">Party Arrangements</a>
+          <Link to="./PartyArrangements">Party Arrangements</Link>
         </li>
         <li>
-          <a href="#">Proposal Set Ups</a>
+          <Link to="./ProposalSets">Proposal Set Ups</Link>
         </li>
         <li>
-          <a href="#">Contact</a>
+          <Link to="./Contact">Contact</Link>
         </li>
       </ul>
     </div>

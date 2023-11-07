@@ -6,7 +6,7 @@ import Menu from "../menu/Menu.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 
-function Hero(props) {
+function Hero() {
   const [currentState, setCurrentState] = useState(0);
   useEffect(() => {
     const timer = setTimeout(() => {
