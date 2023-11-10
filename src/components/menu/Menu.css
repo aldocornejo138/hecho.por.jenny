@@ -21,11 +21,11 @@
   flex-direction: row; /* Display menu options in a row by default */
   flex-wrap: wrap; /* Allow multiple rows for smaller screens */
   justify-content: center;
-  width: 1300px; /* Center the items horizontally */
+  width: 965px; /* Center the items horizontally */
 }
 
 .menu-list li {
-  margin-right: 55px; /* Add spacing between menu options in a row */
+  margin-right: 30px; /* Add spacing between menu options in a row */
   margin-bottom: 15px; /* Add spacing between rows */
 }
 
@@ -46,7 +46,7 @@
 }
 
 /* Media query for screens with a maximum width of 850px */
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 900px) {
   .menu-container {
     margin-top: -20px;
   }

@@ -4,7 +4,7 @@ import "./Proposal.css";
 function Proposal() {
   return (
     <div>
-      <h1>These are Proposals</h1>
+      <h1>Proposals in Progress...</h1>
     </div>
   );
 }

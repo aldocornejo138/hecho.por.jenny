@@ -4,7 +4,7 @@ import "./customBouquets.css";
 function customBouquets() {
   return (
     <div>
-      <h1>These are Custom Bouquets</h1>
+      <h1>Custom Bouquets in progress...</h1>
     </div>
   );
 }

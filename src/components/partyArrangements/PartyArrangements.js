@@ -4,7 +4,7 @@ import "./Party.css";
 function Party() {
   return (
     <div>
-      <h1>This is Party Arrangements</h1>
+      <h1>Party Arrangements in Progress...</h1>
     </div>
   );
 }
