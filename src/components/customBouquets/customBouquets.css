@@ -135,10 +135,8 @@
 }
 .FancyTitle {
   text-align: center;
-  position: absolute;
-  margin-top: 70px;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: fixed;
+  left: 0%;
   font-family: cursive;
   font-size: 2rem;
   color: #ffffff;
@@ -279,14 +277,12 @@
   }
   .FancyTitle {
     text-align: center;
-    top: 15%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: -105%;
+    left: 0%;
     font-family: cursive; /* Use cursive font-family */
     font-size: 1.55rem;
     width: 400px; /* Adjust the font size as needed */
     color: #ffffff; /* Text color */
-    margin-top: 900px;
   }
 
   .svgLineContainer {

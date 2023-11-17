@@ -112,6 +112,9 @@ const CustomBouquets = () => {
         ref={ref}
         className={`fancyContainer ${inView ? "zoomIn" : "zoomOut"}`}
       >
+        <div className="FancyTitle">
+          <h1>Hecho Por Jenny</h1>
+        </div>
         <div className=" svgLineContainer">
           <svg
             xmlns="http://www.w3.org/2000/svg"
