@@ -101,8 +101,8 @@ const CustomBouquets = () => {
         <div className="svgLineContainer ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="300"
-            height="100"
+            width="250"
+            height="80"
             version="1.1"
           >
             <path id="textPath" d="M 10 50 H 400" fill="transparent" />
