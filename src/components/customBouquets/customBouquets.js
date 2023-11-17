@@ -21,6 +21,22 @@ const Title = ({ title, subtitle }) => {
   );
 };
 
+const Description = ({ des }) => {
+  const { ref, inView } = useInView({
+    triggerOnce: false,
+  });
+
+  return (
+    <div
+      ref={ref}
+      className={`imageContainer ${inView ? "zoomIn" : "zoomOut"}`}
+    >
+      <br />
+      <p>{des}</p>
+    </div>
+  );
+};
+
 const CustomBouquets = () => {
   const [currentState, setCurrentState] = useState(0);
   useEffect(() => {
@@ -91,21 +107,7 @@ const CustomBouquets = () => {
         title="Custom Bouquets"
         subtitle="Southern California's Premier Bouquets"
       />
-      <div
-        ref={ref}
-        className={`imageContainer ${inView ? "zoomIn" : "zoomOut"}`}
-      >
-        <br />
-        <p>
-          With over 10 years of expertise, Hecho Por Jenny is your go-to for
-          Custom Bouquets in Southern California. Renowned for personalized and
-          exquisite arrangements, we ensure each bouquet is a masterpiece from
-          design to delivery. Trust us for unparalleled Custom Bouquet
-          Maintenance, combining passion and precision. Elevate your floral
-          experience with Hecho Por Jenny, where every bouquet tells a story of
-          artistry and care.
-        </p>
-      </div>
+      <Description des=" With over 10 years of expertise, Hecho Por Jenny is your go-to for Custom Bouquets in Southern California. Renowned for personalized and exquisite arrangements, we ensure each bouquet is a masterpiece from design to delivery. Trust us for unparalleled Custom Bouquet Maintenance, combining passion and precision. Elevate your floral experience with Hecho Por Jenny, where every bouquet tells a story of artistry and care." />
       <div
         ref={ref}
         className={`fancyContainer ${inView ? "zoomIn" : "zoomOut"}`}
