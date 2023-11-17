@@ -146,7 +146,7 @@
 }
 
 .svgLineContainer {
-  width: 90%; /* Adjust the width as needed */
+  width: 100%; /* Adjust the width as needed */
   height: auto; /* Allow the SVG to scale proportionally based on the container width */
   position: relative;
   top: 22%; /* Position the SVG line vertically in the middle */

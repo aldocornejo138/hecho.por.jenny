@@ -101,7 +101,7 @@ const CustomBouquets = () => {
         <div className="svgLineContainer ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="250"
+            width="347"
             height="80"
             version="1.1"
           >
