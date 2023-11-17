@@ -8,6 +8,19 @@ import { Logo } from "../../assets/index.js";
 const phoneNumber = "(951) 837-8384";
 const phoneLink = `tel:${phoneNumber}`;
 
+const Title = ({ title, subtitle }) => {
+  const { ref, inView } = useInView({
+    triggerOnce: false,
+  });
+
+  return (
+    <div ref={ref} className={`Title ${inView ? "zoomIn" : "zoomOut"}`}>
+      <h1> {title}</h1>
+      <p>{subtitle}</p>
+    </div>
+  );
+};
+
 const CustomBouquets = () => {
   const [currentState, setCurrentState] = useState(0);
   useEffect(() => {
@@ -74,10 +87,10 @@ const CustomBouquets = () => {
         <div style={bgImageStyle}></div>
         <div className="transparent-background"></div>
       </div>
-      <div ref={ref} className={`Title ${inView ? "zoomIn" : "zoomOut"}`}>
-        <h1> Custom Bouquets</h1>
-        <p>Southern California’s Premier Bouquets</p>
-      </div>
+      <Title
+        title="Custom Bouquets"
+        subtitle="Southern California's Premier Bouquets"
+      />
       <div
         ref={ref}
         className={`imageContainer ${inView ? "zoomIn" : "zoomOut"}`}
