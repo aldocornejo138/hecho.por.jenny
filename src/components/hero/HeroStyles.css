@@ -152,7 +152,7 @@ img {
   font-size: 7px;
   border-top: 1px solid #ffffff84; /* Line dividing the top of the section */
   color: #fff;
-  padding-top: -10px; /* Text color for the footer content */
+  padding-top: -10px;
 }
 
 .footer-content {
