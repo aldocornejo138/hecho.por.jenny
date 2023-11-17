@@ -93,12 +93,18 @@ const CustomBouquets = () => {
           artistry and care.
         </p>
       </div>
-      <div className="fancyContainer">
-        <div className={`FancyTitle ${inView ? "zoomIn" : "zoomOut"}`}>
+      <div
+        ref={ref}
+        className={`fancyContainer ${inView ? "zoomIn" : "zoomOut"}`}
+      >
+        <div
+          ref={ref}
+          className={`FancyTitle ${inView ? "zoomIn" : "zoomOut"}`}
+        >
           <h1>Hecho Por Jenny</h1>
         </div>
 
-        <div className={`svgLineContainer ${inView ? "zoomIn" : "zoomOut"}`}>
+        <div className=" svgLineContainer">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="347"
@@ -122,7 +128,7 @@ const CustomBouquets = () => {
           </svg>
         </div>
 
-        <div className={`svgFlower ${inView ? "zoomIn" : "zoomOut"}`}>
+        <div className="svgFlower">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="400"
