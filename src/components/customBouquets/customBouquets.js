@@ -5,7 +5,7 @@ import { useInView } from "react-intersection-observer";
 import imageSlide from "../hero/data.js";
 import { Logo } from "../../assets/index.js";
 
-const phoneNumber = "(951) 837-8384";
+const phoneNumber = "(951) 591-3297";
 const phoneLink = `tel:${phoneNumber}`;
 
 const Title = ({ title, subtitle }) => {

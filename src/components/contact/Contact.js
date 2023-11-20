@@ -6,8 +6,8 @@ import { Logo } from "../../assets/index.js";
 import emailjs from "@emailjs/browser";
 import "./Contact.css";
 
-const phoneNumber = "(951) 837-8384";
-const phoneLink = `tel:${phoneNumber}`;
+const PhoneNumber = "(951) 591-3297";
+const phoneLink = `tel:${PhoneNumber}`;
 
 const Title = ({ title, subtitle }) => {
   const { ref, inView } = useInView({
@@ -116,7 +116,7 @@ const Contact = () => {
           <h1>Hecho Por Jenny</h1>
         </Link>
         <a className="headNumber" href={phoneLink}>
-          {phoneNumber}
+          {PhoneNumber}
         </a>
       </div>
       <div style={bgImageStyle}></div>

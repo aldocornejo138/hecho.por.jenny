@@ -92,17 +92,23 @@
   }
 
   .contact-form {
-    padding: 20px;
+    padding-left: 20px;
     margin-left: 0px;
+    padding-right: 20px;
+    margin-right: 0px;
   }
   .image-container {
     padding: 20px;
     margin-left: 0px;
   }
 
+  .contact-form input {
+    width: 90%;
+  }
+
   .contact-form textarea {
     height: auto;
-    width: auto; /* Adjust height for smaller screens */
+    width: 90%; /* Adjust height for smaller screens */
   }
   .image-container img {
     max-width: 90%;
