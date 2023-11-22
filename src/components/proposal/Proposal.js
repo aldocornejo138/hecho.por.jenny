@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import { useInView } from "react-intersection-observer";
-import imageSlide from "../hero/data.js";
+import imageSlide4 from "./ProposalData.js";
 import { Logo } from "../../assets/index.js";
 
 const phoneNumber = "(951) 591-3297";
@@ -50,7 +50,7 @@ const Proposal = () => {
   }, [currentState]);
 
   const bgImageStyle = {
-    backgroundImage: `url(${imageSlide[currentState].url})`,
+    backgroundImage: `url(${imageSlide4[currentState].url})`,
     backgroundPosition: "center",
     backgroundSize: "cover",
     height: "100%",

@@ -1,26 +1,34 @@
-import Location1 from "./Location1.jpg";
-import Location2 from "./Location2.jpg";
-import Location3 from "./Location3.jpg";
-import Location4 from "./Location4.jpg";
+import pic1 from "./Images/pic-1.jpg";
+import pic2 from "./Images/pic-2.jpg";
+import pic3 from "./Images/pic-3.jpg";
+import pic4 from "./Images/pic-4.jpg";
+import pic5 from "./Images/pic-5.jpg";
 
 const imageSlide2 = [
   {
-    url: Location1,
+    url: pic1,
+    title: "",
+    body: "",
   },
   {
-    url: Location2,
+    url: pic2,
+    title: "",
+    body: "",
   },
   {
-    url: Location3,
+    url: pic3,
+    title: "",
+    body: "",
   },
   {
-    url: Location4,
+    url: pic4,
+    title: "",
+    body: "",
   },
   {
-    url: "Location5.jpg",
-  },
-  {
-    url: "Location6.jpg",
+    url: pic5,
+    title: "",
+    body: "",
   },
 ];
 export default imageSlide2;

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import { useInView } from "react-intersection-observer";
-import imageSlide from "../hero/data.js";
+import imageSlide3 from "./partyData.js";
 import { Logo } from "../../assets/index.js";
 
 const phoneNumber = "(951) 591-3297";
@@ -40,7 +40,7 @@ const PartyArrangements = () => {
   const [currentState, setCurrentState] = useState(0);
   useEffect(() => {
     const timer = setTimeout(() => {
-      if (currentState === 3) {
+      if (currentState === 4) {
         setCurrentState(0);
       } else {
         setCurrentState(currentState + 1);
@@ -50,12 +50,12 @@ const PartyArrangements = () => {
   }, [currentState]);
 
   const bgImageStyle = {
-    backgroundImage: `url(${imageSlide[currentState].url})`,
+    backgroundImage: `url(${imageSlide3[currentState].url})`,
     backgroundPosition: "center",
     backgroundSize: "cover",
     height: "100%",
     weight: "100%",
-    transition: "background-image 3s ease",
+    transition: "background-image 4s ease",
     borderRadius: "25px",
   };
   const { ref, inView } = useInView({
