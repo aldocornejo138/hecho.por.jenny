@@ -1,10 +1,14 @@
 .product-container {
   display: flex;
-  justify-content: space-between; /* Adjust as needed */
+  justify-content: space-between;
   flex-wrap: wrap;
   margin-left: 50px;
   margin-right: 50px;
 }
+
+.cardContainer {
+}
+
 .card {
   width: 290px;
   height: 354px;
@@ -12,15 +16,42 @@
   background: #e0e0e000;
   box-shadow: 5px 5px 10px #ffd9fa, -5px -5px 10px #ffd9fa;
   margin-bottom: 100px;
+  overflow: hidden; /* Ensure child elements don't overflow */
 }
 
-@media (max-width: 850px) {
+.card-content {
+  position: relative;
+}
+
+.card img {
+  width: 100%; /* Make the image fill the container */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 50px;
+  z-index: -1; /* Behind the h2 */
+}
+
+.cardContainer h2 {
+  color: white;
+  position: absolute;
+  z-index: 1;
+  left: 85px;
+  bottom: 20px;
+}
+
+@media (max-width: 750px) {
   .product-container {
     margin-right: 15px;
     margin-left: 15px;
+    flex-direction: column;
   }
   .card {
-    width: calc(50% - 20px); /* Adjust spacing as needed */
+    width: calc(50% - 25px);
     height: 250px;
+  }
+  .cardContainer h2 {
+    bottom: 20px;
+    left: 35px;
+  }
+  .cardContainer {
   }
 }

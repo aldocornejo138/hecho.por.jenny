@@ -2,20 +2,24 @@ import React from "react";
 import "./products.css";
 
 const ProductCard = ({ imageSrc, title }) => (
-  <div className="card">
-    <img src={imageSrc} alt={title} />
-    <h2>{title}</h2>
+  <div className="cardContainer">
+    <div className="card">
+      <img src={imageSrc} alt={title} />
+    </div>
+    <div className="card-content">
+      <h2>{title}</h2>
+    </div>
   </div>
 );
 
 const products = () => {
   const productsData = [
     {
-      imageSrc: "url_to_your_image_1",
+      imageSrc: "pic-1.jpg",
       title: "Product 1",
     },
     {
-      imageSrc: "url_to_your_image_2",
+      imageSrc: "pic-2.jpg",
       title: "Product 2",
     },
     {
@@ -24,11 +28,11 @@ const products = () => {
     },
     {
       imageSrc: "url_to_your_image_4",
-      title: "Product 3",
+      title: "Product 4",
     },
     {
       imageSrc: "url_to_your_image_5",
-      title: "Product 3",
+      title: "Product 5",
     },
   ];
 
