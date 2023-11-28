@@ -4,6 +4,7 @@ import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import { useInView } from "react-intersection-observer";
 import imageSlide from "../hero/data.js";
 import { Logo } from "../../assets/index.js";
+import Products from "./products.js";
 
 const phoneNumber = "(951) 591-3297";
 const phoneLink = `tel:${phoneNumber}`;
@@ -183,7 +184,7 @@ const CustomBouquets = () => {
           </svg>
         </div>
       </div>
-
+      <Products />
       <footer className="Footer">
         <div className="footer-content">
           <div className="left-content">
