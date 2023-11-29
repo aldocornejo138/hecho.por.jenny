@@ -4,11 +4,11 @@ import "./products.css";
 const ProductCard = ({ imageSrc, title }) => (
   <div className="card">
     <img src={imageSrc} alt={title} />
-    <h2> {title}</h2>
+    <h2>{title}</h2>
   </div>
 );
 
-const products = () => {
+const Products = () => {
   const productsData = [
     {
       imageSrc: "pic-1.jpg",
@@ -35,10 +35,13 @@ const products = () => {
   return (
     <div className="product-container">
       {productsData.map((product, index) => (
-        <ProductCard key={index} {...product} />
+        <div className="emptyDiv" key={index}>
+          <ProductCard {...product} />
+          <h2>{product.title}</h2>
+        </div>
       ))}
     </div>
   );
 };
 
-export default products;
+export default Products;
