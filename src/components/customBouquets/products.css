@@ -1,12 +1,15 @@
 .product-container {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
   margin-left: 50px;
   margin-right: 50px;
 }
-
-.cardContainer {
+.product-container h2 {
+  color: white;
+  position: relative;
+  z-index: 1;
 }
 
 .card {
@@ -15,7 +18,7 @@
   border-radius: 50px;
   background: #e0e0e000;
   box-shadow: 5px 5px 10px #ffd9fa, -5px -5px 10px #ffd9fa;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
   overflow: hidden; /* Ensure child elements don't overflow */
 }
 
@@ -38,20 +41,20 @@
   bottom: 20px;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 250px) {
   .product-container {
-    margin-right: 15px;
-    margin-left: 15px;
-    flex-direction: column;
+    margin-right: 5px;
+    margin-left: 5px;
+    justify-content: space-around;
   }
   .card {
-    width: calc(50% - 25px);
+    width: calc(53% - 25px);
     height: 250px;
+    margin-bottom: 35px;
   }
-  .cardContainer h2 {
-    bottom: 20px;
-    left: 35px;
-  }
-  .cardContainer {
+
+  .product-container h2 {
+    width: 30%;
+    left: 25px;
   }
 }

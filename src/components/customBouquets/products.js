@@ -2,13 +2,8 @@ import React from "react";
 import "./products.css";
 
 const ProductCard = ({ imageSrc, title }) => (
-  <div className="cardContainer">
-    <div className="card">
-      <img src={imageSrc} alt={title} />
-    </div>
-    <div className="card-content">
-      <h2>{title}</h2>
-    </div>
+  <div className="card">
+    <img src={imageSrc} alt={title} />
   </div>
 );
 
@@ -39,7 +34,10 @@ const products = () => {
   return (
     <div className="product-container">
       {productsData.map((product, index) => (
-        <ProductCard key={index} {...product} />
+        <div key={index}>
+          <ProductCard {...product} />
+          <h2>{product.title}</h2>
+        </div>
       ))}
     </div>
   );
