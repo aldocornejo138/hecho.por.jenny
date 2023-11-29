@@ -4,6 +4,7 @@ import "./products.css";
 const ProductCard = ({ imageSrc, title }) => (
   <div className="card">
     <img src={imageSrc} alt={title} />
+    <h2> {title}</h2>
   </div>
 );
 
@@ -34,10 +35,7 @@ const products = () => {
   return (
     <div className="product-container">
       {productsData.map((product, index) => (
-        <div key={index}>
-          <ProductCard {...product} />
-          <h2>{product.title}</h2>
-        </div>
+        <ProductCard key={index} {...product} />
       ))}
     </div>
   );

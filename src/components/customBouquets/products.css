@@ -41,14 +41,14 @@
   bottom: 20px;
 }
 
-@media (max-width: 250px) {
+@media (max-width: 750px) {
   .product-container {
     margin-right: 5px;
     margin-left: 5px;
     justify-content: space-around;
   }
   .card {
-    width: calc(53% - 25px);
+    width: calc(50% - 25px);
     height: 250px;
     margin-bottom: 35px;
   }
