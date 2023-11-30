@@ -11,14 +11,13 @@ const ProductCard = ({ imageSrc, title, price }) => {
     <div>
       <div ref={ref} className={`card ${inView ? "zoomIn" : "zoomOut"}`}>
         <img src={imageSrc} alt={title} />
-        <h2>{title}</h2>
       </div>
       <div
         ref={ref}
         className={`product-details ${inView ? "zoomIn" : "zoomOut"}`}
       >
-        <h3>{price}</h3>
         <h2>{title}</h2>
+        <h3>{price}</h3>
         <button>Request</button>
       </div>
     </div>

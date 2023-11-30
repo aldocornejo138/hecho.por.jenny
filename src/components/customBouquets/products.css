@@ -30,30 +30,47 @@
 }
 
 .card:hover img {
-  transform: scale(1.1); /* Increase the scale on hover for a zoom effect */
+  transform: scale(1.1);
+  cursor: pointer;
 }
 
-.product-container h2 {
+.product-details h2 {
   color: white;
   z-index: 1;
-  transition: margin-top 0.3s ease-in-out; /* Add a transition for a smoother effect */
+  transition: 0.3s ease-in-out;
+  margin-bottom: 10px;
+  margin-top: -0px;
 }
 
-.card:hover h2 {
-  margin-top: 120px; /* Adjust the margin on hover to create space for the zoomed image */
-}
-
-.product-container h3 {
+.product-details h3 {
   color: rgb(0, 255, 4);
   font-size: 22px;
   margin-right: 5px;
   margin-left: 10px;
+  margin-top: 0px;
 }
 
 .product-details {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  margin-left: 60px;
+  margin-left: 0px;
+}
+
+.product-details button {
+  border-radius: 25px;
+  font-size: 20px; /* Adjusted font size for a more delicate look */
+  padding: 10px 20px; /* Add padding for a more comfortable touch */
+  margin-bottom: 55px;
+  color: #fff;
+  background-color: #ff9cf5; /* Light pink color for a floral touch */
+  transition: background-color 0.3s ease-in-out;
+  margin-top: -10px;
+}
+
+.product-details button:hover {
+  background-color: #ff7fd7; /* Darker pink color on hover */
+  cursor: pointer;
 }
 
 @media (max-width: 750px) {
@@ -93,7 +110,8 @@
   .product-container h2 {
     color: white;
     z-index: 1;
-    margin-bottom: 10px;
+    top: 10px;
+    margin-bottom: 0px;
     margin-top: 0px;
   }
 
@@ -102,7 +120,8 @@
     font-size: 22px;
     margin-right: 5px;
     margin-left: 10px;
-    margin-bottom: 0px;
+    bottom: 0px;
+    margin-top: 18px;
   }
 
   .product-details button {
@@ -113,6 +132,7 @@
     color: #fff;
     background-color: #ff9cf5; /* Light pink color for a floral touch */
     transition: background-color 0.3s ease-in-out;
+    margin-top: -15px;
   }
 
   .product-details button:hover {
