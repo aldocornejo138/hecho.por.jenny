@@ -1,15 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import "./products.css";
 import { useInView } from "react-intersection-observer";
+import Overlay from "./Overlay";
 
 const ProductCard = ({ imageSrc, title, price }) => {
   const { ref, inView } = useInView({
     triggerOnce: false,
   });
 
+  const [isOverlayOpen, setIsOverlayOpen] = useState(false);
+
+  const openOverlay = () => {
+    setIsOverlayOpen(true);
+  };
+
+  const closeOverlay = () => {
+    setIsOverlayOpen(false);
+  };
+
   return (
-    <div>
-      <div ref={ref} className={`card ${inView ? "zoomIn" : "zoomOut"}`}>
+    <div className="product-details">
+      <div
+        onClick={openOverlay}
+        ref={ref}
+        className={`card ${inView ? "zoomIn" : "zoomOut"}`}
+      >
         <img src={imageSrc} alt={title} />
       </div>
       <div
@@ -18,8 +33,16 @@ const ProductCard = ({ imageSrc, title, price }) => {
       >
         <h2>{title}</h2>
         <h3>{price}</h3>
-        <button>Request</button>
       </div>
+
+      {isOverlayOpen && (
+        <Overlay isOpen={isOverlayOpen} onClose={closeOverlay}>
+          <img src={imageSrc} alt={title} />
+          <h2>{title}</h2>
+          <h3>{price}</h3>
+          <button className="product-details-button">Request</button>
+        </Overlay>
+      )}
     </div>
   );
 };
