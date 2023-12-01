@@ -54,7 +54,7 @@
   align-items: center;
   width: 100%;
   height: auto;
-  z-index: 99999;
+  z-index: 99;
   margin-top: 0px;
   position: absolute;
 }
@@ -77,14 +77,14 @@
   font-size: #ffd9fa;
   cursor: pointer;
   padding-right: 0px;
-  z-index: 999;
+  z-index: -1;
 }
 
 .navbarLogo img {
   height: 25%;
   width: 25%;
   margin-left: -225px;
-  z-index: 999;
+  z-index: -1;
   margin-top: 25px;
 }
 
@@ -110,7 +110,7 @@
   padding: 0rem 0rem;
   white-space: nowrap;
   cursor: pointer;
-  z-index: 999;
+  z-index: 9;
   margin-right: 100px;
 }
 
@@ -245,7 +245,7 @@
     align-items: center;
     width: 100%;
     height: auto;
-    z-index: 99999;
+    z-index: 99;
     margin-top: 0px;
     position: absolute;
   }
