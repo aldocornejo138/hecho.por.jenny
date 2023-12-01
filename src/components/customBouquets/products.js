@@ -37,7 +37,7 @@ const ProductCard = ({ imageSrc, title, price }) => {
 
       {isOverlayOpen && (
         <Overlay isOpen={isOverlayOpen} onClose={closeOverlay}>
-          <img src={imageSrc} alt={title} />
+          <img className="card" src={imageSrc} alt={title} />
           <h2>{title}</h2>
           <h3>{price}</h3>
           <button className="product-details-button">Request</button>
