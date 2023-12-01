@@ -83,6 +83,7 @@
   text-align: center;
   background: rgba(0, 0, 0, 0);
   border-radius: 50px;
+  transition: 3s ease-in-out;
 }
 
 .overlay__controls {
@@ -94,6 +95,7 @@
 .overlay__close:after {
   display: inline-block;
   content: "\00d7";
+  transition: 3s ease-in-out;
 }
 
 .overlay__close {
@@ -102,6 +104,7 @@
   font-size: 36px;
   cursor: pointer;
   color: white;
+  transition: 3s ease-in-out;
 }
 
 .overlay img {
