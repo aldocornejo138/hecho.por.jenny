@@ -73,7 +73,7 @@
   cursor: pointer;
 }
 
-@media (max-width: 750px) {
+@media (min-width: 425px) and (max-width: 850px) {
   .product-container {
     margin-right: 5px;
     margin-left: 5px;
@@ -83,6 +83,73 @@
   .card {
     width: 180px;
     height: 250px;
+    margin-bottom: 5px;
+  }
+  .card h2 {
+    top: 150px;
+  }
+
+  .product-container h2 {
+    color: white;
+    position: relative;
+  }
+  .emptyDiv {
+    margin: 0;
+    padding: 0;
+    height: auto;
+    width: fit-content;
+  }
+
+  .product-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 10px;
+  }
+
+  .product-container h2 {
+    color: white;
+    z-index: 1;
+    top: 10px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .product-container h3 {
+    color: rgb(0, 255, 4);
+    font-size: 22px;
+    margin-right: 5px;
+    margin-left: 10px;
+    bottom: 0px;
+    margin-top: 18px;
+  }
+
+  .product-details button {
+    border-radius: 25px;
+    font-size: 20px; /* Adjusted font size for a more delicate look */
+    padding: 10px 20px; /* Add padding for a more comfortable touch */
+    margin-bottom: 35px;
+    color: #fff;
+    background-color: #ff9cf5; /* Light pink color for a floral touch */
+    transition: background-color 0.3s ease-in-out;
+    margin-top: -15px;
+  }
+
+  .product-details button:hover {
+    background-color: #ff7fd7; /* Darker pink color on hover */
+  }
+}
+
+@media (max-width: 420px) {
+  .product-container {
+    margin-right: 3px;
+    margin-left: 3px;
+    justify-content: space-around;
+  }
+
+  .card {
+    width: 150px;
+    height: 200px;
     margin-bottom: 5px;
   }
   .card h2 {
