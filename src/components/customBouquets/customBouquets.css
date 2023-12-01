@@ -36,7 +36,7 @@
   width: 100%;
   height: 15%;
   position: absolute;
-  z-index: 9999;
+  z-index: 9;
   top: 0;
   left: 0;
   background-image: linear-gradient(to top, rgba(255, 0, 0, 0), rgb(4, 3, 3));
@@ -114,6 +114,11 @@
   margin-right: 100px;
 }
 
+.navLinks h1 {
+  color: #ffd9fa;
+  text-shadow: 1px 1px 2px #d44dd4, -1px -1px 2px rgb(185, 41, 173);
+}
+
 .Title {
   font-size: 2rem;
   color: #ffd9fa;
@@ -126,6 +131,7 @@
   margin-top: 77px;
   border: 4px solid #ffd9fa;
   border-radius: 25px;
+  box-shadow: 1px 1px 5px #ca66bd, -1px -1px 5px #ca66bd;
 }
 
 .Title p {
