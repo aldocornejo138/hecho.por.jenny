@@ -216,10 +216,10 @@
     width: 300px;
     height: fit-content;
     text-align: center;
-
     border-radius: 50px;
     transition: background-color 0.3s ease-in-out, transform 0.5s ease-in-out;
     opacity: 0; /* Initially set the opacity to 0 to create a fade-in effect */
+    transition-delay: 0.1s; /* Add a delay to the transition */
   }
 
   .overlay__container.show {
@@ -236,7 +236,7 @@
   .overlay__close:after {
     display: inline-block;
     content: "\00d7";
-    transition: color 0.3s ease-in-out;
+    transition: color 2s ease-in-out;
   }
 
   .overlay__close {
@@ -253,7 +253,7 @@
     height: 350px;
     margin-bottom: 20px;
     border-radius: 50px;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 2s ease-in-out;
   }
 }
 

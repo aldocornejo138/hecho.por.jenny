@@ -36,7 +36,12 @@ const ProductCard = ({ imageSrc, title, price }) => {
       </div>
 
       {isOverlayOpen && (
-        <Overlay isOpen={isOverlayOpen} onClose={closeOverlay}>
+        <Overlay
+          ref={ref}
+          isOpen={isOverlayOpen}
+          onClose={closeOverlay}
+          className={` ${inView ? "zoomIn" : "zoomOut"}`}
+        >
           <img className="card" src={imageSrc} alt={title} />
           <h2>{title}</h2>
           <h3>{price}</h3>
