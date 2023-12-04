@@ -68,14 +68,15 @@
   left: 0;
   cursor: pointer;
   z-index: 9;
+  transition: background-color 0.3s ease-in-out; /* Add transition for background color change */
 }
 
 .overlay__container {
   background-color: white;
   position: fixed;
-  top: 50%; /* Center the overlay vertically */
-  left: 50%; /* Center the overlay horizontally */
-  transform: translate(-50%, -50%); /* Center the overlay */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 10;
   padding: 30px;
   width: fit-content;
@@ -83,7 +84,7 @@
   text-align: center;
   background: rgba(0, 0, 0, 0);
   border-radius: 50px;
-  transition: 3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, transform 0.5s ease-in-out; /* Add transitions for background color change and transform */
 }
 
 .overlay__controls {
@@ -95,7 +96,7 @@
 .overlay__close:after {
   display: inline-block;
   content: "\00d7";
-  transition: 3s ease-in-out;
+  transition: color 0.3s ease-in-out; /* Add transition for close button color change */
 }
 
 .overlay__close {
@@ -104,15 +105,29 @@
   font-size: 36px;
   cursor: pointer;
   color: white;
-  transition: 3s ease-in-out;
+  transition: color 0.3s ease-in-out; /* Add transition for close button color change */
 }
 
 .overlay img {
-  width: 300px; /* Ensure the image takes up 100% of the container width */
+  width: 300px;
   height: auto;
-  max-width: 100%; /* Ensure the image doesn't exceed its original size */
+  max-width: 100%;
   margin-bottom: 20px;
   border-radius: 25px;
+  transition: transform 0.5s ease-in-out; /* Add transition for image scaling */
+}
+
+.overlay__container:hover {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.2
+  ); /* Add a subtle background color change on hover */
+}
+
+.overlay__container:hover img {
+  transform: scale(1.05); /* Add a slight scale effect on image hover */
 }
 
 .product-details-button {
@@ -196,6 +211,7 @@
     left: 0;
     cursor: pointer;
     z-index: 998;
+    transition: background-color 0.3s ease-in-out;
   }
 
   .overlay__container {
@@ -211,6 +227,7 @@
     text-align: center;
 
     border-radius: 50px;
+    transition: background-color 0.3s ease-in-out, transform 0.5s ease-in-out;
   }
 
   .overlay__controls {
@@ -222,6 +239,7 @@
   .overlay__close:after {
     display: inline-block;
     content: "\00d7";
+    transition: color 0.3s ease-in-out;
   }
 
   .overlay__close {
@@ -230,13 +248,15 @@
     font-size: 36px;
     cursor: pointer;
     color: white;
+    transition: color 0.3s ease-in-out;
   }
 
   .overlay img {
     width: 300px; /* Ensure the image takes up 100% of the container width */
     height: 350px;
     margin-bottom: 20px;
-    border-radius: 25px;
+    border-radius: 50px;
+    transition: transform 0.5s ease-in-out;
   }
 }
 
@@ -289,5 +309,57 @@
     margin-left: 10px;
     bottom: 0px;
     margin-top: 18px;
+  }
+
+  .overlay__background {
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    z-index: 998;
+  }
+
+  .overlay__container {
+    background-color: rgba(255, 255, 255, 0);
+    position: fixed;
+    top: 50%; /* Center the overlay vertically */
+    left: 50%; /* Center the overlay horizontally */
+    transform: translate(-50%, -50%); /* Center the overlay */
+    z-index: 999;
+    padding: 30px;
+    width: 300px;
+    height: fit-content;
+    text-align: center;
+
+    border-radius: 50px;
+  }
+
+  .overlay__controls {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .overlay__close:after {
+    display: inline-block;
+    content: "\00d7";
+  }
+
+  .overlay__close {
+    border: none;
+    background-color: transparent;
+    font-size: 36px;
+    cursor: pointer;
+    color: white;
+  }
+
+  .overlay img {
+    width: 300px; /* Ensure the image takes up 100% of the container width */
+    height: 350px;
+    margin-bottom: 20px;
+    border-radius: 50px;
   }
 }
