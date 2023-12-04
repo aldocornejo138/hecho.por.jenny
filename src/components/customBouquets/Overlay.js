@@ -7,7 +7,7 @@ export function Overlay({ isOpen, onClose, children }) {
       {isOpen && (
         <div className="overlay">
           <div className="overlay__background" onClick={onClose} />
-          <div className="overlay__container">
+          <div className={`overlay__container ${isOpen ? "show" : ""}`}>
             <div className="overlay__controls">
               <button
                 className="overlay__close"
@@ -22,5 +22,4 @@ export function Overlay({ isOpen, onClose, children }) {
     </Fragment>
   );
 }
-
 export default Overlay;
