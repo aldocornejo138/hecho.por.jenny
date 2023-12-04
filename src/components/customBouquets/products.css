@@ -79,7 +79,7 @@
   transform: translate(-50%, -50%); /* Center the overlay */
   z-index: 999;
   padding: 30px;
-  width: 300px;
+  width: 500px;
   height: fit-content;
   text-align: center;
   border-radius: 50px;
@@ -87,8 +87,6 @@
   opacity: 0; /* Initially set the opacity to 0 to create a fade-in effect */
   transition-delay: 0.1s; /* Add a delay to the transition */
   text-align: center;
-  width: 700px;
-  height: auto;
 }
 
 .overlay__container.show {
@@ -120,28 +118,50 @@
 }
 
 .overlay img {
-  width: 700px; /* Fixed width */
-  height: 700px;
+  width: 500px; /* Fixed width */
+  height: 500px;
   border-radius: 50px;
   transition: transform 2s ease-in-out;
   display: block;
   margin-bottom: 50px;
 }
 .product-details-button {
+  position: relative;
   border-radius: 25px;
-  font-size: 20px;
+  font-size: 22px;
   padding: 10px 20px;
   margin-bottom: 55px;
   color: #fff;
-  background-color: #ff9cf5;
-  transition: background-color 0.3s ease-in-out;
-  margin-top: -10px;
+  background: linear-gradient(90deg, #fa52e9, #ff56c9);
+  background-size: 200% 100%;
+  animation: shine 5s linear infinite, fancy 0.5s ease-in-out infinite alternate;
 }
 
 .product-details-button:hover {
-  background-color: #ff7fd7;
+  animation: none; /* Disable animation on hover */
+  transform: scale(1.1); /* Enlarge on hover */
+  background: #ff00ae; /* Change background color on hover */
   cursor: pointer;
 }
+
+@keyframes shine {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+@keyframes fancy {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+
 .white-text {
   color: white;
 }
@@ -367,5 +387,76 @@
     height: 350px;
     margin-bottom: 20px;
     border-radius: 50px;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1500px) {
+  /* Overlay.css */
+
+  .overlay__background {
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    z-index: 998;
+    transition: background-color 2s ease-in-out;
+  }
+
+  .overlay__container {
+    background-color: rgba(255, 255, 255, 0);
+    position: fixed;
+    top: 50%; /* Center the overlay vertically */
+    left: 50%; /* Center the overlay horizontally */
+    transform: translate(-50%, -50%); /* Center the overlay */
+    z-index: 999;
+    padding: 30px;
+    width: 400px;
+    height: fit-content;
+    text-align: center;
+    border-radius: 50px;
+    transition: background-color 0.3s ease-in-out, transform 0.5s ease-in-out;
+    opacity: 0; /* Initially set the opacity to 0 to create a fade-in effect */
+    transition-delay: 0.1s; /* Add a delay to the transition */
+    text-align: center;
+  }
+
+  .overlay__container.show {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  .overlay__controls {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: 0px;
+  }
+
+  .overlay__close:after {
+    display: inline-block;
+    content: "\00d7";
+    transition: color 2s ease-in-out;
+  }
+
+  .overlay__close {
+    border: none;
+    background-color: transparent;
+    font-size: 50px;
+    cursor: pointer;
+    color: white;
+    transition: color 2s ease-in-out;
+    margin-right: -55px;
+  }
+
+  .overlay img {
+    width: 400px; /* Fixed width */
+    height: 400px;
+    border-radius: 50px;
+    transition: transform 2s ease-in-out;
+    display: block;
+    margin-bottom: 50px;
   }
 }
