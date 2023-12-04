@@ -247,6 +247,8 @@
     cursor: pointer;
     color: white;
     transition: color 2s ease-in-out;
+    margin-right: -70px;
+    margin-bottom: 25px;
   }
 
   .overlay img {
