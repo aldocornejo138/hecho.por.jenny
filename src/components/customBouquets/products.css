@@ -132,9 +132,14 @@
   padding: 10px 20px;
   margin-bottom: 55px;
   color: #fff;
-  background: linear-gradient(90deg, #fa52e9, #ff56c9);
+  background: linear-gradient(
+    90deg,
+    #f04adf,
+    rgb(223, 182, 222),
+    rgb(254, 0, 238)
+  );
   background-size: 200% 100%;
-  animation: shine 5s linear infinite, fancy 0.5s ease-in-out infinite alternate;
+  animation: shine 7s linear infinite, fancy 1s ease-in-out infinite alternate;
 }
 
 .product-details-button:hover {
@@ -158,7 +163,7 @@
     transform: scale(1);
   }
   100% {
-    transform: scale(1.05);
+    transform: scale(1.15);
   }
 }
 
