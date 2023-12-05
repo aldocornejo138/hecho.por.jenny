@@ -132,12 +132,7 @@
   padding: 10px 20px;
   margin-bottom: 55px;
   color: #fff;
-  background: linear-gradient(
-    90deg,
-    #f04adf,
-    rgb(223, 182, 222),
-    rgb(254, 0, 238)
-  );
+  background: linear-gradient(90deg, #f04adf, rgb(244, 155, 244), #f04adf);
   background-size: 200% 100%;
   animation: shine 7s linear infinite, fancy 1s ease-in-out infinite alternate;
 }
