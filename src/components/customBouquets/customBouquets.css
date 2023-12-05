@@ -232,26 +232,45 @@
     opacity: 0;
   }
 }
-
 .cartButton {
   position: sticky;
   top: 50px; /* Adjust this value based on the height of your SVG lines */
   left: 85%;
   margin-bottom: 40px;
   margin-top: -50px;
-  z-index: 100;
-  /* Other styles */
-  color: #c471c4;
+  z-index: 1;
 }
 
-/* Add this class to make it fixed when scrolling above the SVG lines */
-.cartButton.fixed {
+.cartButton button {
+  background-color: #f988ea; /* Pink color */
+  color: rgb(255, 255, 255); /* White text color */
+  border: none;
+  border-radius: 20px; /* Round corners */
+  padding: 10px 15px; /* Adjust padding as needed */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 15px;
+  margin-right: -25px;
+}
+
+/* Add styles for the button in the fixed state */
+.cartButton.fixed button {
   position: fixed;
   top: 20px;
   left: 75%;
   margin-left: -30px;
   margin-top: 0px;
-  width: 100px;
+  width: 120px;
+  font-size: 15px;
+}
+
+/* Adjust background color on hover */
+.cartButton.fixed button:hover {
+  background-color: #ff4784; /* Slightly different shade of pink on hover */
+}
+
+.cartButton button:hover {
+  background-color: #f92d71;
 }
 /* Add media query for smaller screens */
 @media only screen and (max-width: 768px) {
