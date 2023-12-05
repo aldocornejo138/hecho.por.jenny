@@ -40,7 +40,27 @@ const Description = ({ des }) => {
 
 const CustomBouquets = () => {
   const [currentState, setCurrentState] = useState(0);
+  const [cartItems, setCartItems] = useState([]);
+  const [isCartFixed, setIsCartFixed] = useState(false); // Add this line
+
+  const addToCart = (title, price) => {
+    const isItemInCart = cartItems.some((item) => item.title === title);
+
+    if (!isItemInCart) {
+      setCartItems([...cartItems, { title, price }]);
+      alert(`${title} added to cart!`);
+    } else {
+      alert(`${title} is already in the cart!`);
+    }
+  };
+
   useEffect(() => {
+    const handleScroll = () => {
+      const scrollThreshold = 1090;
+
+      setIsCartFixed(window.scrollY > scrollThreshold);
+    };
+
     const timer = setTimeout(() => {
       if (currentState === 3) {
         setCurrentState(0);
@@ -48,7 +68,13 @@ const CustomBouquets = () => {
         setCurrentState(currentState + 1);
       }
     }, 8000);
-    return () => clearTimeout(timer);
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, [currentState]);
 
   const bgImageStyle = {
@@ -184,7 +210,13 @@ const CustomBouquets = () => {
           </svg>
         </div>
       </div>
-      <Products />
+
+      <div className={`cartButton ${isCartFixed ? "fixed" : ""}`}>
+        <button onClick={() => alert("Cart clicked!")}>
+          Cart {cartItems.length} item{cartItems.length !== 1 ? "s" : ""}
+        </button>
+      </div>
+      <Products addToCart={addToCart} />
       <footer className="Footer">
         <div className="footer-content">
           <div className="left-content">

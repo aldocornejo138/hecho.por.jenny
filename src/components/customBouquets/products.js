@@ -3,7 +3,7 @@ import "./products.css";
 import { useInView } from "react-intersection-observer";
 import Overlay from "./Overlay";
 
-const ProductCard = ({ imageSrc, title, price }) => {
+const ProductCard = ({ imageSrc, title, price, addToCart }) => {
   const { ref, inView } = useInView({
     triggerOnce: false,
   });
@@ -45,7 +45,9 @@ const ProductCard = ({ imageSrc, title, price }) => {
           <img className="card" src={imageSrc} alt={title} />
           <h2>{title}</h2>
           <h3>{price}</h3>
-          <button className="product-details-button">Add To Cart</button>
+          <button className="product-details-button" onClick={addToCart}>
+            Add To Cart
+          </button>
         </Overlay>
       )}
     </div>
@@ -53,6 +55,19 @@ const ProductCard = ({ imageSrc, title, price }) => {
 };
 
 const Products = () => {
+  const [cartItems, setCartItems] = useState([]);
+
+  const addToCart = (title, price) => {
+    const isItemInCart = cartItems.some((item) => item.title === title);
+
+    if (!isItemInCart) {
+      setCartItems([...cartItems, { title, price }]);
+      alert(`${title} added to cart!`);
+    } else {
+      alert(`${title} is already in the cart!`);
+    }
+  };
+
   const productsData = [
     {
       imageSrc: "pic-1.jpg",
@@ -85,7 +100,10 @@ const Products = () => {
     <div className="product-container">
       {productsData.map((product, index) => (
         <div className="emptyDiv" key={index}>
-          <ProductCard {...product} />
+          <ProductCard
+            {...product}
+            addToCart={() => addToCart(product.title, product.price)}
+          />
         </div>
       ))}
     </div>
