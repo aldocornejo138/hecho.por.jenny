@@ -5,6 +5,7 @@ import { useInView } from "react-intersection-observer";
 import imageSlide from "../hero/data.js";
 import { Logo } from "../../assets/index.js";
 import Products from "./products.js";
+import CartModal from "./CartModal"; // Import CartModal
 
 const phoneNumber = "(951) 591-3297";
 const phoneLink = `tel:${phoneNumber}`;
@@ -43,14 +44,24 @@ const CustomBouquets = () => {
   const [cartItems, setCartItems] = useState([]);
   const [isCartFixed, setIsCartFixed] = useState(false); // Add this line
 
+  const [isCartModalOpen, setIsCartModalOpen] = useState(false);
+
+  const openCartModal = () => {
+    setIsCartModalOpen(true);
+  };
+
+  const closeCartModal = () => {
+    setIsCartModalOpen(false);
+  };
+
   const addToCart = (title, price) => {
     const isItemInCart = cartItems.some((item) => item.title === title);
 
     if (!isItemInCart) {
       setCartItems([...cartItems, { title, price }]);
-      alert(`${title} added to cart!`);
+      alert(`${title} added to cart!`); // Display only the title property
     } else {
-      alert(`${title} is already in the cart!`);
+      alert(`${title} is already in the cart!`); // Similarly, display only the title property
     }
   };
 
@@ -178,9 +189,9 @@ const CustomBouquets = () => {
               id="line"
               d="M 10 20 C 100 5, 150 35, 350 20"
               fill="none"
-              stroke-width="3.5"
-              stroke-dasharray="200 300"
-              stroke-linecap="round"
+              strokeWidth="3.5"
+              strokeDasharray="200 300"
+              strokeLinecap="round"
             >
               <animate
                 attributeName="stroke-dashoffset"
@@ -216,10 +227,14 @@ const CustomBouquets = () => {
           isCartFixed ? "fixed zoomIn" : "unfixed zoomOut"
         }`}
       >
-        <button onClick={() => alert("Cart clicked!")}>
+        <button onClick={openCartModal}>
           Cart {cartItems.length} item{cartItems.length !== 1 ? "s" : ""}
         </button>
       </div>
+
+      {isCartModalOpen && (
+        <CartModal cartItems={cartItems} onClose={closeCartModal} />
+      )}
       <Products addToCart={addToCart} />
       <footer className="Footer">
         <div className="footer-content">

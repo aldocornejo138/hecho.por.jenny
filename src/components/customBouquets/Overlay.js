@@ -28,6 +28,7 @@ export function Overlay({ isOpen, onClose, children }) {
                 className="overlay__close"
                 type="button"
                 onClick={onClose}
+                button
               />
             </div>
             {children}

@@ -95,9 +95,9 @@ function Hero() {
               id="inverseLine"
               d="M 350 20 C 250 35, 200 5, 10 20"
               fill="none"
-              stroke-width="4"
-              stroke-dasharray="200 300"
-              stroke-linecap="round"
+              strokeWidth="4"
+              strokeDasharray="200 300"
+              strokeLinecap="round"
             >
               <animate
                 attributeName="stroke-dashoffset"

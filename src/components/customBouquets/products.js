@@ -34,17 +34,11 @@ const ProductCard = ({ imageSrc, title, price, addToCart }) => {
         <h2>{title}</h2>
         <h3>{price}</h3>
       </div>
-
       {isOverlayOpen && (
-        <Overlay
-          ref={ref}
-          isOpen={isOverlayOpen}
-          onClose={closeOverlay}
-          className={` ${inView ? "zoomIn" : "zoomOut"}`}
-        >
-          <img className="card" src={imageSrc} alt={title} />
-          <h2>{title}</h2>
-          <h3>{price}</h3>
+        <Overlay isOpen={isOverlayOpen} onClose={closeOverlay}>
+          <img className="card" src={String(imageSrc)} alt={String(title)} />
+          <h2>{String(title)}</h2>
+          <h3>{String(price)}</h3>
           <button className="product-details-button" onClick={addToCart}>
             Add To Cart
           </button>
@@ -54,20 +48,7 @@ const ProductCard = ({ imageSrc, title, price, addToCart }) => {
   );
 };
 
-const Products = () => {
-  const [cartItems, setCartItems] = useState([]);
-
-  const addToCart = (title, price) => {
-    const isItemInCart = cartItems.some((item) => item.title === title);
-
-    if (!isItemInCart) {
-      setCartItems([...cartItems, { title, price }]);
-      alert(`${title} added to cart!`);
-    } else {
-      alert(`${title} is already in the cart!`);
-    }
-  };
-
+const Products = ({ addToCart }) => {
   const productsData = [
     {
       imageSrc: "pic-1.jpg",
@@ -101,8 +82,12 @@ const Products = () => {
       {productsData.map((product, index) => (
         <div className="emptyDiv" key={index}>
           <ProductCard
-            {...product}
-            addToCart={() => addToCart(product.title, product.price)}
+            imageSrc={product.imageSrc}
+            title={product.title}
+            price={product.price}
+            addToCart={() =>
+              addToCart(product.title, product.price, product.imageSrc)
+            } // Pass individual properties to addToCart
           />
         </div>
       ))}
