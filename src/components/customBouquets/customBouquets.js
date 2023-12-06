@@ -56,7 +56,7 @@ const CustomBouquets = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollThreshold = 1090;
+      const scrollThreshold = 920;
 
       setIsCartFixed(window.scrollY > scrollThreshold);
     };
@@ -211,7 +211,11 @@ const CustomBouquets = () => {
         </div>
       </div>
 
-      <div className={`cartButton ${isCartFixed ? "fixed" : ""}`}>
+      <div
+        className={`cartButton ${
+          isCartFixed ? "fixed zoomIn" : "unfixed zoomOut"
+        }`}
+      >
         <button onClick={() => alert("Cart clicked!")}>
           Cart {cartItems.length} item{cartItems.length !== 1 ? "s" : ""}
         </button>

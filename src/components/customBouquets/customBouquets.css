@@ -233,12 +233,13 @@
   }
 }
 .cartButton {
-  position: sticky;
+  position: fixed;
   top: 50px; /* Adjust this value based on the height of your SVG lines */
   left: 85%;
-  margin-bottom: 40px;
+  margin-bottom: 0px;
   margin-top: -50px;
   z-index: 1;
+  opacity: 1;
 }
 
 .cartButton button {
@@ -250,7 +251,8 @@
   cursor: pointer;
   transition: background-color 0.3s ease;
   font-size: 15px;
-  margin-right: -25px;
+  margin-right: -55px;
+  opacity: 1;
 }
 
 /* Add styles for the button in the fixed state */
@@ -258,10 +260,22 @@
   position: fixed;
   top: 20px;
   left: 75%;
+  margin-left: 0px;
+  margin-top: 0px;
+  width: 120px;
+  font-size: 15px;
+  opacity: 1;
+}
+
+.cartButton.unfixed button {
+  position: fixed;
+  top: 20px;
+  left: 75%;
   margin-left: -30px;
   margin-top: 0px;
   width: 120px;
   font-size: 15px;
+  opacity: 0;
 }
 
 /* Adjust background color on hover */
@@ -273,7 +287,7 @@
   background-color: #f92d71;
 }
 /* Add media query for smaller screens */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 858px) {
   .head {
     padding: 0px 25px; /* Adjust padding for even smaller screens */
   }
@@ -377,5 +391,50 @@
     color: #fff;
     padding-top: -10px;
     background-color: #000000; /* Text color for the footer content */
+  }
+
+  .cartButton {
+    position: fixed;
+    top: 50px; /* Adjust this value based on the height of your SVG lines */
+    left: 85%;
+    margin-bottom: 0px;
+    margin-top: -50px;
+    z-index: 1;
+    opacity: 1;
+  }
+
+  .cartButton button {
+    background-color: #f988ea; /* Pink color */
+    color: rgb(255, 255, 255); /* White text color */
+    border: none;
+    border-radius: 20px; /* Round corners */
+    padding: 10px 15px; /* Adjust padding as needed */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 15px;
+    opacity: 1;
+  }
+
+  /* Add styles for the button in the fixed state */
+  .cartButton.fixed button {
+    position: fixed;
+    top: 20px;
+    left: 75%;
+    margin-left: -70px;
+    margin-top: 0px;
+    width: 120px;
+    font-size: 15px;
+    opacity: 1;
+  }
+
+  .cartButton.unfixed button {
+    position: fixed;
+    top: 20px;
+    left: 75%;
+    margin-left: -30px;
+    margin-top: 0px;
+    width: 120px;
+    font-size: 15px;
+    opacity: 0;
   }
 }
