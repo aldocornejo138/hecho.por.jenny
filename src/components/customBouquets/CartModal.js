@@ -31,71 +31,74 @@ const CartModal = ({ cartItems, onClose, onItemDelete, onQuantityChange }) => {
   };
 
   return (
-    <div className="cart-modal">
-      <div className="cart-header">
-        <h2>Items In Cart</h2>
-        <button className="close-btn" onClick={onClose}>
-          Close
-        </button>
-      </div>
-      {cartItems.length === 0 ? (
-        <p>No items in the cart</p>
-      ) : (
-        <div>
-          <ul>
-            {cartItems.map((item, index) => (
-              <li key={index}>
-                <div className="cart-item">
-                  <div className="item-info">
-                    <img
-                      src={item.imageSrc}
-                      alt={item.title}
-                      className="miniature-image"
-                    />
-                    <p className="item-title">{item.title}</p>
-                    <p className="item-price">${item.price}</p>
-                  </div>
-                  <div className="item-actions">
-                    <button
-                      className="quantity-btn"
-                      onClick={() =>
-                        handleQuantityChange(index, item.quantity - 1)
-                      }
-                    >
-                      -
-                    </button>
-                    <span className="quantity">{item.quantity}</span>
-                    <button
-                      className="quantity-btn"
-                      onClick={() =>
-                        handleQuantityChange(index, item.quantity + 1)
-                      }
-                    >
-                      +
-                    </button>
-                    <button
-                      className="delete-btn"
-                      onClick={() => handleDelete(index)}
-                    >
-                      Remove
-                    </button>
-                  </div>
-                </div>
-              </li>
-            ))}
-          </ul>
-          <div className="total-price">
-            <p>
-              Sub Total: ${calculateTotalPrice().toFixed(2)}
-              <br />
-              Shipping: FREE
-            </p>
-          </div>
-          <div className="checkout-btn-container">
-            <button className="checkout-btn">Checkout</button>
-          </div>
+    <div>
+      <div className="overlayBackground" onClick={onClose} />
+      <div className="cart-modal">
+        <div className="cart-header">
+          <h2>Items In Cart</h2>
+          <button className="close-btn" onClick={onClose}>
+            Close
+          </button>
         </div>
-      )}
+        {cartItems.length === 0 ? (
+          <p>No items in the cart</p>
+        ) : (
+          <div>
+            <ul>
+              {cartItems.map((item, index) => (
+                <li key={index}>
+                  <div className="cart-item">
+                    <div className="item-info">
+                      <img
+                        src={item.imageSrc}
+                        alt={item.title}
+                        className="miniature-image"
+                      />
+                      <p className="item-title">{item.title}</p>
+                      <p className="item-price">${item.price}</p>
+                    </div>
+                    <div className="item-actions">
+                      <button
+                        className="quantity-btn"
+                        onClick={() =>
+                          handleQuantityChange(index, item.quantity - 1)
+                        }
+                      >
+                        -
+                      </button>
+                      <span className="quantity">{item.quantity}</span>
+                      <button
+                        className="quantity-btn"
+                        onClick={() =>
+                          handleQuantityChange(index, item.quantity + 1)
+                        }
+                      >
+                        +
+                      </button>
+                      <button
+                        className="delete-btn"
+                        onClick={() => handleDelete(index)}
+                      >
+                        Remove
+                      </button>
+                    </div>
+                  </div>
+                </li>
+              ))}
+            </ul>
+            <div className="total-price">
+              <p>
+                Sub Total: ${calculateTotalPrice().toFixed(2)}
+                <br />
+                Shipping: FREE
+              </p>
+            </div>
+            <div className="checkout-btn-container">
+              <button className="checkout-btn">Checkout</button>
+            </div>
+          </div>
+        )}
+      </div>
     </div>
   );
 };

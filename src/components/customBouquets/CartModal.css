@@ -1,6 +1,6 @@
 /* CartModal.css */
 .cart-modal {
-  background-color: rgb(173, 125, 183);
+  background-color: rgb(127, 101, 132);
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 20px;
@@ -109,4 +109,41 @@ ul {
   height: 150px; /* Adjust the height as needed */
   margin-right: 10px;
   border-radius: 15px;
+}
+
+/* Overlay.css */
+
+.overlayBackground {
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  z-index: 998;
+  transition: background-color 2s ease-in-out;
+}
+
+.overlayContainer {
+  background-color: rgba(255, 255, 255, 0);
+  position: fixed;
+  top: 50%; /* Center the overlay vertically */
+  left: 50%; /* Center the overlay horizontally */
+  transform: translate(-50%, -50%); /* Center the overlay */
+  z-index: 999;
+  padding: 30px;
+  width: 500px;
+  height: fit-content;
+  text-align: center;
+  border-radius: 50px;
+  transition: background-color 0.3s ease-in-out, transform 0.5s ease-in-out;
+  opacity: 0; /* Initially set the opacity to 0 to create a fade-in effect */
+  transition-delay: 0.1s; /* Add a delay to the transition */
+  text-align: center;
+}
+
+.overlayContainer.show {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
 }

@@ -38,7 +38,7 @@ const ProductCard = ({ imageSrc, title, price, addToCart }) => {
         <Overlay isOpen={isOverlayOpen} onClose={closeOverlay}>
           <img className="card" src={String(imageSrc)} alt={String(title)} />
           <h2>{String(title)}</h2>
-          <h3>{String(price)}</h3>
+          <h3>${String(price)}</h3>
           <button className="product-details-button" onClick={addToCart}>
             Add To Cart
           </button>
