@@ -54,16 +54,16 @@ const CustomBouquets = () => {
     setIsCartModalOpen(false);
   };
 
-  const addToCart = (title, price) => {
+  const addToCart = (title, price, imageSrc) => {
     const isItemInCart = cartItems.some((item) => item.title === title);
 
     if (!isItemInCart) {
       setCartItems([
         ...cartItems,
-        { title, price: parseFloat(price), quantity: 1 },
+        { title, price: parseFloat(price), quantity: 1, imageSrc },
       ]);
     } else {
-      alert(`${title} is already in the cart!`); // Similarly, display only the title property
+      alert(`${title} is already in the cart!`);
     }
   };
 

@@ -2,19 +2,16 @@
 import React from "react";
 import "./CartModal.css"; // Import your modal styles
 
-const CartModal = ({
-  cartItems,
-  onClose,
-  onItemDelete,
-  onQuantityChange,
-  productData,
-}) => {
+const CartModal = ({ cartItems, onClose, onItemDelete, onQuantityChange }) => {
   const handleDelete = (index) => {
     onItemDelete(index);
   };
 
   const handleQuantityChange = (index, newQuantity) => {
-    onQuantityChange(index, newQuantity);
+    // Ensure that the new quantity is greater than or equal to zero
+    if (newQuantity >= 0) {
+      onQuantityChange(index, newQuantity);
+    }
   };
 
   const calculateTotalPrice = () => {
@@ -50,6 +47,11 @@ const CartModal = ({
               <li key={index}>
                 <div className="cart-item">
                   <div className="item-info">
+                    <img
+                      src={item.imageSrc}
+                      alt={item.title}
+                      className="miniature-image"
+                    />
                     <p className="item-title">{item.title}</p>
                     <p className="item-price">${item.price}</p>
                   </div>
@@ -75,7 +77,7 @@ const CartModal = ({
                       className="delete-btn"
                       onClick={() => handleDelete(index)}
                     >
-                      Delete
+                      Remove
                     </button>
                   </div>
                 </div>
