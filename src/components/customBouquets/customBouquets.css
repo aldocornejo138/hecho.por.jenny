@@ -274,7 +274,7 @@
   left: 85%;
   margin-bottom: 0px;
   margin-top: -50px;
-  z-index: 1;
+  z-index: 9999;
   opacity: 1;
 }
 
@@ -321,6 +321,25 @@
 
 .cartButton button:hover {
   background-color: #f92d71;
+}
+
+/* Add this to your CSS file */
+.cartButtonAnimated {
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25%,
+  75% {
+    transform: translateX(-1px); /* Adjust the distance of the shake */
+  }
+  50% {
+    transform: translateX(1px);
+  }
 }
 /* Add media query for smaller screens */
 @media only screen and (max-width: 858px) {
@@ -435,7 +454,7 @@
     left: 85%;
     margin-bottom: 0px;
     margin-top: -50px;
-    z-index: 1;
+    z-index: 9999;
     opacity: 1;
   }
 
