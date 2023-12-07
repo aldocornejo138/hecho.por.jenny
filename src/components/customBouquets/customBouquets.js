@@ -58,11 +58,25 @@ const CustomBouquets = () => {
     const isItemInCart = cartItems.some((item) => item.title === title);
 
     if (!isItemInCart) {
-      setCartItems([...cartItems, { title, price }]);
-      alert(`${title} added to cart!`); // Display only the title property
+      setCartItems([
+        ...cartItems,
+        { title, price: parseFloat(price), quantity: 1 },
+      ]);
     } else {
       alert(`${title} is already in the cart!`); // Similarly, display only the title property
     }
+  };
+
+  const handleItemDelete = (index) => {
+    const newCartItems = [...cartItems];
+    newCartItems.splice(index, 1);
+    setCartItems(newCartItems);
+  };
+
+  const handleQuantityChange = (index, newQuantity) => {
+    const newCartItems = [...cartItems];
+    newCartItems[index].quantity = newQuantity;
+    setCartItems(newCartItems);
   };
 
   useEffect(() => {
@@ -224,7 +238,7 @@ const CustomBouquets = () => {
 
       <div
         className={`cartButton ${
-          isCartFixed ? "fixed zoomIn" : "unfixed zoomOut"
+          isCartFixed ? "fixed cartZoomIn" : "unfixed cartZoomOut"
         }`}
       >
         <button onClick={openCartModal}>
@@ -233,7 +247,12 @@ const CustomBouquets = () => {
       </div>
 
       {isCartModalOpen && (
-        <CartModal cartItems={cartItems} onClose={closeCartModal} />
+        <CartModal
+          cartItems={cartItems}
+          onClose={closeCartModal}
+          onItemDelete={handleItemDelete}
+          onQuantityChange={handleQuantityChange} // Pass the quantity change function
+        />
       )}
       <Products addToCart={addToCart} />
       <footer className="Footer">

@@ -1,34 +1,111 @@
 /* CartModal.css */
 .cart-modal {
-  display: block;
-  position: fixed;
-  z-index: 1000;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  background-color: white;
+  background-color: rgb(173, 125, 183);
+  border: 1px solid #ccc;
+  border-radius: 8px;
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
 }
 
-.modal-content {
-  text-align: center;
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 20px;
+.close-btn {
+  background-color: #f988ea;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
   cursor: pointer;
 }
 
 ul {
-  list-style-type: none;
+  list-style: none;
   padding: 0;
 }
 
-li {
-  margin-bottom: 10px;
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+
+.item-info {
+  flex-grow: 1;
+}
+
+.item-title {
+  margin: 0;
+  font-size: 16px;
+}
+
+.item-price {
+  margin: 0;
+  color: #888;
+  font-size: 14px;
+}
+
+.item-actions {
+  display: flex;
+  align-items: center;
+}
+
+.quantity-btn {
+  background-color: #f988ea;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  padding: 5px;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.quantity {
+  margin: 0 5px;
+  font-size: 16px;
+}
+
+.delete-btn {
+  background-color: #ff3b3b;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.total-price p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.checkout-btn-container {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.checkout-btn {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.miniature-image {
+  width: 50px; /* Adjust the width as needed */
+  height: 50px; /* Adjust the height as needed */
+  margin-right: 10px;
 }
