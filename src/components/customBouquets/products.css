@@ -383,10 +383,11 @@
   }
 
   .overlay img {
-    width: 300px; /* Ensure the image takes up 100% of the container width */
-    height: 350px;
+    width: 250px; /* Ensure the image takes up 100% of the container width */
+    height: 250px;
     margin-bottom: 20px;
     border-radius: 50px;
+    margin-left: 25px;
   }
 }
 

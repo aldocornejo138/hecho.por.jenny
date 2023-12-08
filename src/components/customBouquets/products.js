@@ -53,27 +53,27 @@ const Products = ({ addToCart }) => {
     {
       imageSrc: "pic-1.jpg",
       title: "Product 1",
-      price: "150",
+      price: "149.99",
     },
     {
       imageSrc: "pic-2.jpg",
       title: "Product 2",
-      price: "150",
+      price: "149.99",
     },
     {
       imageSrc: "url_to_your_image_3",
       title: "Product 3",
-      price: "150",
+      price: "149.99",
     },
     {
       imageSrc: "url_to_your_image_4",
       title: "Product 4",
-      price: "150",
+      price: "149.99",
     },
     {
       imageSrc: "url_to_your_image_5",
       title: "Product 5",
-      price: "150",
+      price: "149.99",
     },
   ];
 

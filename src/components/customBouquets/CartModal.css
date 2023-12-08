@@ -76,8 +76,9 @@ ul {
   border-radius: 20%;
   padding: 10px;
   cursor: pointer;
-  margin: 0 50px;
+  margin: 0 40px;
   font-size: 22px;
+  margin-bottom: 20px;
 }
 
 .quantity {
@@ -92,6 +93,7 @@ ul {
   border-radius: 5px;
   padding: 5px 10px;
   cursor: pointer;
+  margin-right: 2px;
 }
 
 .total-price p {
@@ -119,6 +121,9 @@ ul {
   height: 150px; /* Adjust the height as needed */
   margin-right: 10px;
   border-radius: 15px;
+  box-shadow: 2px 2px 5px #ffd9fa, -2px -2px 5px #ffd9fa;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 /* Overlay.css */
