@@ -41,7 +41,7 @@ const CartModal = ({ cartItems, onClose, onItemDelete, onQuantityChange }) => {
           </button>
         </div>
         {cartItems.length === 0 ? (
-          <p>No items in the cart</p>
+          <p>No Items In Cart</p>
         ) : (
           <div>
             <ul>
@@ -56,8 +56,7 @@ const CartModal = ({ cartItems, onClose, onItemDelete, onQuantityChange }) => {
                       />
                       <p className="item-title">{item.title}</p>
                       <p className="item-price">${item.price}</p>
-                    </div>
-                    <div className="item-actions">
+
                       <button
                         className="quantity-btn"
                         onClick={() =>
@@ -75,6 +74,8 @@ const CartModal = ({ cartItems, onClose, onItemDelete, onQuantityChange }) => {
                       >
                         +
                       </button>
+                    </div>
+                    <div className="item-actions">
                       <button
                         className="delete-btn"
                         onClick={() => handleDelete(index)}
