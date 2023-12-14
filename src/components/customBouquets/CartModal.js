@@ -32,13 +32,16 @@ const CartModal = ({ cartItems, onClose, onItemDelete, onQuantityChange }) => {
 
   const checkout = async () => {
     try {
-      const response = await fetch("http://localhost:4000/checkout", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ cartItems }),
-      });
+      const response = await fetch(
+        "http://https://hecho-por-jenny.vercel.app//checkout",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ cartItems }),
+        }
+      );
 
       const data = await response.json();
 
