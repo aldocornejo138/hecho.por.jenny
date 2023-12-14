@@ -1,27 +1,29 @@
+// server.js or api.js (or your server file)
 const express = require("express");
-const stripe = require("stripe")(
-  "sk_test_51OMEiVI1zNR8sZYDhbr9NCc7zuiymsX9kFPFLf73mubeF28mu2nrjFspwD70eBu5hRXDpCUUGhCZgOlGVDUnxjLT00i5i8Davv"
-); // replace with your actual Stripe secret key
+const stripe = require("stripe")("your_secret_stripe_key"); // Replace with your actual secret key
 
-const router = express.Router();
+const app = express();
+const port = 3001;
 
-router.post("/create-checkout-session", async (req, res) => {
-  const { cartItems } = req.body;
+app.use(express.json());
 
+app.post("/api/create-checkout-session", async (req, res) => {
+  // Get your product information from the request body
+  const { title, price, quantity, imageSrc } = req.body;
+
+  // Create a checkout session using the Stripe API
   const session = await stripe.checkout.sessions.create({
     payment_method_types: ["card"],
-    line_items: cartItems.map((item) => ({
-      price_data: {
+    line_items: [
+      {
+        name: title,
+        description: "Custom bouquet",
+        images: [imageSrc],
+        amount: Math.round(price * 100), // Convert price to cents
         currency: "usd",
-        product_data: {
-          name: item.title,
-          images: [item.imageSrc],
-        },
-        unit_amount: parseInt(item.price * 100), // Stripe requires the amount in cents
+        quantity: quantity,
       },
-      quantity: item.quantity,
-    })),
-    mode: "payment",
+    ],
     success_url: "http://localhost:3000/success", // Replace with your success URL
     cancel_url: "http://localhost:3000/cancel", // Replace with your cancel URL
   });
@@ -29,4 +31,6 @@ router.post("/create-checkout-session", async (req, res) => {
   res.json({ id: session.id });
 });
 
-module.exports = router;
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
+});
