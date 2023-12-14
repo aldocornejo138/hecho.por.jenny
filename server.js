@@ -1,4 +1,13 @@
-//sk_test_51OMEiVI1zNR8sZYDhbr9NCc7zuiymsX9kFPFLf73mubeF28mu2nrjFspwD70eBu5hRXDpCUUGhCZgOlGVDUnxjLT00i5i8Davv;
+const express = require("express");
+const apiRoutes = require("./server/api"); // Adjust the path accordingly
 
-//Product 1: price_1OMEvyI1zNR8sZYDu7Iv8yqk
-//Product 2: price_1OMEy0I1zNR8sZYD2Przz5fx
+const app = express();
+const port = process.env.PORT || 3001;
+
+app.use(express.json());
+
+app.use("/api", apiRoutes);
+
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
+});

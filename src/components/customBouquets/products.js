@@ -48,14 +48,19 @@ const ProductCard = ({ imageSrc, title, price, addToCart }) => {
   );
 };
 
+//Product 1: price_1OMEvyI1zNR8sZYDu7Iv8yqk
+//Product 2: price_1OMEy0I1zNR8sZYD2Przz5fx
+
 const Products = ({ addToCart }) => {
   const productsData = [
     {
+      id: "price_1OMEvyI1zNR8sZYDu7Iv8yqk",
       imageSrc: "pic-1.jpg",
       title: "Product 1",
       price: "149.99",
     },
     {
+      id: "price_1OMEy0I1zNR8sZYD2Przz5fx",
       imageSrc: "pic-2.jpg",
       title: "Product 2",
       price: "149.99",
@@ -86,7 +91,12 @@ const Products = ({ addToCart }) => {
             title={product.title}
             price={product.price}
             addToCart={() =>
-              addToCart(product.title, product.price, product.imageSrc)
+              addToCart(
+                product.title,
+                product.price,
+                product.imageSrc,
+                product.id
+              )
             } // Pass individual properties to addToCart
           />
         </div>

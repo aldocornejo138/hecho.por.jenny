@@ -1,6 +1,11 @@
 // CartModal.js
 import React from "react";
 import "./CartModal.css"; // Import your modal styles
+import { loadStripe } from "@stripe/stripe-js";
+
+const stripePromise = loadStripe(
+  "sk_test_51OMEiVI1zNR8sZYDhbr9NCc7zuiymsX9kFPFLf73mubeF28mu2nrjFspwD70eBu5hRXDpCUUGhCZgOlGVDUnxjLT00i5i8Davv"
+);
 
 const CartModal = ({ cartItems, onClose, onItemDelete, onQuantityChange }) => {
   const handleDelete = (index) => {
@@ -30,6 +35,29 @@ const CartModal = ({ cartItems, onClose, onItemDelete, onQuantityChange }) => {
     return totalPrice;
   };
 
+  const checkout = async () => {
+    const stripe = await stripePromise;
+
+    const response = await fetch("/api/create-checkout-session", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ cartItems }), // Send cart items to your server
+    });
+
+    const session = await response.json();
+
+    // Redirect to Checkout Session
+    const result = await stripe.redirectToCheckout({
+      sessionId: session.id,
+    });
+
+    if (result.error) {
+      console.error(result.error.message);
+      // Handle errors
+    }
+  };
   return (
     <div>
       <div className="overlayBackground" onClick={onClose} />
@@ -95,7 +123,13 @@ const CartModal = ({ cartItems, onClose, onItemDelete, onQuantityChange }) => {
               </p>
             </div>
             <div className="checkout-btn-container">
-              <button className="checkout-btn">Checkout</button>
+              <button
+                className="checkout-btn"
+                variant="success"
+                onClick={checkout}
+              >
+                Checkout
+              </button>
             </div>
           </div>
         )}
