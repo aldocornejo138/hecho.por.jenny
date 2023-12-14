@@ -33,7 +33,7 @@ const CartModal = ({ cartItems, onClose, onItemDelete, onQuantityChange }) => {
   const checkout = async () => {
     try {
       const response = await fetch(
-        "http://hecho-por-jenny.vercel.app//checkout",
+        "http://hecho-por-jenny.vercel.app/checkout",
         {
           method: "POST",
           headers: {
