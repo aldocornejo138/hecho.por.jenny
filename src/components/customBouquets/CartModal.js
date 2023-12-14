@@ -32,7 +32,7 @@ const CartModal = ({ cartItems, onClose, onItemDelete, onQuantityChange }) => {
 
   const checkout = async () => {
     try {
-      const response = await fetch("http://localhost:4000/checkout", {
+      const response = await fetch("/checkout", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
