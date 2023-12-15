@@ -32,16 +32,13 @@ const CartModal = ({ cartItems, onClose, onItemDelete, onQuantityChange }) => {
 
   const checkout = async () => {
     try {
-      const response = await fetch(
-        "http://hecho-por-jenny.vercel.app/checkout",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ cartItems }),
-        }
-      );
+      const response = await fetch("http://localhost:4000/checkout", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ cartItems }),
+      });
 
       const data = await response.json();
 
@@ -113,7 +110,10 @@ const CartModal = ({ cartItems, onClose, onItemDelete, onQuantityChange }) => {
             </ul>
             <div className="total-price">
               <p>
-                Sub Total: ${calculateTotalPrice().toFixed(2)}
+                <span style={{ color: "black" }}>Sub Total:</span>{" "}
+                <span style={{ color: "rgb(0, 255, 94)" }}>
+                  ${calculateTotalPrice().toFixed(2)}
+                </span>
                 <br />
                 Shipping: FREE
               </p>
