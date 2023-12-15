@@ -225,25 +225,25 @@ const Contact = () => {
         ref={ref}
         className={`contact-form ${inView ? "zoomIn" : "zoomOut"}`}
       >
-        <form ref={form} className="">
-          {errMsg && <p className="outline-designColor">{errMsg}</p>}
-          {successMsg && <p className="successMsg">{successMsg}</p>}
+        <form ref={form} className="contact-form-inner">
+          {errMsg && <p className="error-msg">{errMsg}</p>}
+          {successMsg && <p className="success-msg">{successMsg}</p>}
 
-          <div className="">
-            <div className="">
-              <h1 className="">YOUR NAME</h1>
+          <div className="form-group">
+            <div className="input-group">
+              <h1 className="label">YOUR NAME</h1>
               <input
                 onChange={(e) => setUsername(e.target.value)}
                 value={user_name}
                 name="user_name"
                 className={`${
                   errMsg === "Username is required!" && "outline-designColor"
-                } contactInput`}
+                } contact-input`}
                 type="text"
               />
             </div>
-            <div className="">
-              <h1 className="">Phone Number</h1>
+            <div className="input-group">
+              <h1 className="label">Phone Number</h1>
               <input
                 onChange={(e) => setPhoneNumber(e.target.value)}
                 value={phoneNumber}
@@ -251,55 +251,55 @@ const Contact = () => {
                 className={`${
                   errMsg === "Phone number is required!" &&
                   "outline-designColor"
-                } contactInput`}
+                } contact-input`}
                 type="text"
               />
             </div>
           </div>
-          <div className="">
-            <h1 className="">Email</h1>
+          <div className="input-group">
+            <h1 className="label">Email</h1>
             <input
               onChange={(e) => setEmail(e.target.value)}
               value={user_email}
               name="user_email"
               className={`${
                 errMsg === "Please give your Email!" && "outline-designColor"
-              } contactInput`}
+              } contact-input`}
               type="email"
             />
           </div>
-          <div className="">
-            <h1 className="">Subject</h1>
+          <div className="input-group">
+            <h1 className="label">Subject</h1>
             <input
               onChange={(e) => setSubject(e.target.value)}
               name="subject"
               value={subject}
               className={`${
                 errMsg === "Plese give your Subject!" && "outline-designColor"
-              } contactInput`}
+              } contact-input`}
               type="text"
             />
           </div>
-          <div className="">
-            <h1 className="">Message (Please Include Your City)</h1>
+          <div className="input-group">
+            <h1 className="label">Message (Please Include Your City)</h1>
             <textarea
               onChange={(e) => setMessage(e.target.value)}
               value={message}
               name="message"
               className={`${
                 errMsg === "Message is required!" && "outline-designColor"
-              } contactTextArea`}
+              } contact-textarea`}
               cols="30"
               rows="8"
             ></textarea>
           </div>
-          <div className="w-full">
-            <button onClick={handleSend} className="">
+          <div className="full-width">
+            <button onClick={handleSend} className="send-button">
               Send Message
             </button>
           </div>
-          {errMsg && <p className="errorMsg">{errMsg}</p>}
-          {successMsg && <p className="successMsg">{successMsg}</p>}
+          {errMsg && <p className="error-msg">{errMsg}</p>}
+          {successMsg && <p className="success-msg">{successMsg}</p>}
         </form>
       </div>
 

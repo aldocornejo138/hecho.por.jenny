@@ -156,6 +156,7 @@
   color: white;
   border-radius: 25px;
   border-color: #ffd9fa;
+  margin-bottom: 155px;
 }
 
 /* Style for input fields */
@@ -183,4 +184,76 @@
 
 .outline-designColor {
   color: red;
+}
+
+/* Common styles for the outer container */
+.contact-form {
+  max-width: 600px; /* Adjust as needed */
+  margin: 0 auto;
+}
+
+/* Styles for the inner form container */
+.contact-form-inner {
+  padding: 20px;
+  background-color: #000000;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for the form group */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Styles for input groups */
+.input-group {
+  margin-bottom: 20px;
+}
+
+/* Styles for labels */
+.label {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+
+/* Common styles for inputs and textareas */
+.contact-input,
+.contact-textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+/* Styles for outlined input when there is an error */
+.outline-designColor {
+  border: 2px solid rgb(0, 255, 94);
+}
+
+/* Styles for full-width elements */
+.full-width {
+  width: 100%;
+}
+
+/* Styles for the send button */
+.send-button {
+  background-color: rgb(0, 255, 94);
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Styles for error and success messages */
+.error-msg,
+.success-msg {
+  color: rgb(0, 255, 94);
+  font-size: 14px;
+  margin-top: 10px;
 }
