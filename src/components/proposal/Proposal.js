@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import { useInView } from "react-intersection-observer";
 import imageSlide4 from "./ProposalData.js";
 import { Logo } from "../../assets/index.js";
+import emailjs from "@emailjs/browser";
 
 const phoneNumber = "(951) 591-3297";
 const phoneLink = `tel:${phoneNumber}`;
@@ -37,6 +38,63 @@ const Description = ({ des }) => {
 };
 
 const Proposal = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm(
+      "service_p0jbhyl",
+      "template_gb44azs",
+      form.current,
+      "Ah9VqXeck2rq2S5Me"
+    );
+  };
+
+  const [user_name, setUsername] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [user_email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+  const [errMsg, setErrMsg] = useState("");
+  const [successMsg, setSuccessMsg] = useState("");
+
+  // ========== Email Validation start here ==============
+  const emailValidation = () => {
+    return String(user_email)
+      .toLocaleLowerCase()
+      .match(/^\w+([.-]?\w+)*@\w+([-]?\w+)*(\.\w{2,3})+$/);
+  };
+  // ========== Email Validation end here ================
+
+  const handleSend = (e) => {
+    e.preventDefault();
+    if (user_name === "") {
+      setErrMsg("Username is required!!");
+    } else if (phoneNumber === "") {
+      setErrMsg("Phone number is required!");
+    } else if (user_email === "") {
+      setErrMsg("Please give your Email!");
+    } else if (!emailValidation(user_email)) {
+      setErrMsg("Give a valid Email!");
+    } else if (subject === "") {
+      setErrMsg("Plese give your Subject!");
+    } else if (message === "") {
+      setErrMsg("Message is required!");
+    } else {
+      setSuccessMsg(
+        `Thank you ${user_name}, Your Message has been sent Successfully!`
+      );
+      sendEmail(e);
+      setErrMsg("");
+      setUsername("");
+      setPhoneNumber("");
+      setEmail("");
+      setSubject("");
+      setMessage("");
+    }
+  };
+
   const [currentState, setCurrentState] = useState(0);
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -180,6 +238,88 @@ const Proposal = () => {
             </path>
           </svg>
         </div>
+      </div>
+
+      <div
+        ref={ref}
+        className={`contact-form ${inView ? "zoomIn" : "zoomOut"}`}
+      >
+        <form ref={form} className="contact-form-inner">
+          {errMsg && <p className="error-msg">{errMsg}</p>}
+          {successMsg && <p className="success-msg">{successMsg}</p>}
+
+          <div className="form-group">
+            <div className="input-group">
+              <h1 className="label">YOUR NAME</h1>
+              <input
+                onChange={(e) => setUsername(e.target.value)}
+                value={user_name}
+                name="user_name"
+                className={`${
+                  errMsg === "Username is required!" && "outline-designColor"
+                } contact-input`}
+                type="text"
+              />
+            </div>
+            <div className="input-group">
+              <h1 className="label">Phone Number</h1>
+              <input
+                onChange={(e) => setPhoneNumber(e.target.value)}
+                value={phoneNumber}
+                name="phoneNumber"
+                className={`${
+                  errMsg === "Phone number is required!" &&
+                  "outline-designColor"
+                } contact-input`}
+                type="text"
+              />
+            </div>
+          </div>
+          <div className="input-group">
+            <h1 className="label">Email</h1>
+            <input
+              onChange={(e) => setEmail(e.target.value)}
+              value={user_email}
+              name="user_email"
+              className={`${
+                errMsg === "Please give your Email!" && "outline-designColor"
+              } contact-input`}
+              type="email"
+            />
+          </div>
+          <div className="input-group">
+            <h1 className="label">Subject</h1>
+            <input
+              onChange={(e) => setSubject(e.target.value)}
+              name="subject"
+              value={subject}
+              className={`${
+                errMsg === "Plese give your Subject!" && "outline-designColor"
+              } contact-input`}
+              type="text"
+            />
+          </div>
+          <div className="input-group">
+            <h1 className="label">Message (Please Include Your City)</h1>
+            <textarea
+              onChange={(e) => setMessage(e.target.value)}
+              value={message}
+              name="message"
+              className={`${
+                errMsg === "Message is required!" && "outline-designColor"
+              } contact-textarea`}
+              cols="30"
+              rows="8"
+            ></textarea>
+          </div>
+          <div className="full-width">
+            <button onClick={handleSend} className="send-button">
+              Send Message
+            </button>
+          </div>
+          {errMsg && <p className="error-msg">{errMsg}</p>}
+          {successMsg && <p className="success-msg">{successMsg}</p>}
+        </form>
       </div>
 
       <footer className="Footer">
