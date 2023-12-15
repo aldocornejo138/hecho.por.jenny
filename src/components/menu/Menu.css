@@ -4,7 +4,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: rgba(157, 117, 160, 0.122);
+  background-color: rgba(157, 117, 160, 0);
   border: 1px solid black;
   padding: 20px;
   text-align: center;
@@ -31,9 +31,9 @@
 
 .menu-list a {
   text-decoration: none;
-  color: white;
+  color: rgb(255, 255, 255);
   font-family: cursive;
-  font-size: 30px;
+  font-size: 45px;
   display: block;
   transition: color 0.3s;
 }
