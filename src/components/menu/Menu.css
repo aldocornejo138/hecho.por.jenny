@@ -35,8 +35,8 @@
   font-family: cursive;
   font-size: 45px;
   display: block;
-  -webkit-text-stroke: 0.5px rgb(255, 0, 234); /* Safari/Chrome */
-  text-stroke: 0.5px rgb(242, 0, 255); /* Standard property */
+  -webkit-text-stroke: 3px rgb(255, 0, 234); /* Safari/Chrome */
+  text-stroke: 3px rgb(242, 0, 255); /* Standard property */
   -webkit-transition: color 0.3s, -webkit-text-stroke 0.3s; /* Safari/Chrome */
   transition: color 0.3s, text-stroke 0.3s; /* Standard property */
 }
