@@ -4,7 +4,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: rgba(157, 117, 160, 0);
+  background-color: rgba(157, 117, 160, 0.174);
   border: 1px solid black;
   padding: 20px;
   text-align: center;
@@ -36,7 +36,7 @@
   font-size: 45px;
   display: block;
   transition: color 0.3s, text-shadow 0.3s;
-  font-weight: 45px;
+  font-weight: 1000px;
 }
 
 .menu-list a:hover {
