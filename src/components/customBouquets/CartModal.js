@@ -32,13 +32,16 @@ const CartModal = ({ cartItems, onClose, onItemDelete, onQuantityChange }) => {
 
   const checkout = async () => {
     try {
-      const response = await fetch("http://localhost:4000/checkout", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ cartItems }),
-      });
+      const response = await fetch(
+        "https://hechoporjenny-backend.wl.r.appspot.com/checkout",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ cartItems }),
+        }
+      );
 
       const data = await response.json();
 
@@ -124,7 +127,7 @@ const CartModal = ({ cartItems, onClose, onItemDelete, onQuantityChange }) => {
                 variant="success"
                 onClick={checkout}
               >
-                Checkout
+                Request
               </button>
             </div>
           </div>
