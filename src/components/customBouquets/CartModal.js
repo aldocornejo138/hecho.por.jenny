@@ -33,7 +33,7 @@ const CartModal = ({ cartItems, onClose, onItemDelete, onQuantityChange }) => {
   const checkout = async () => {
     try {
       const response = await fetch(
-        "https://hechoporjenny-backend.wl.r.appspot.com/",
+        "https://hechoporjenny-backend.wl.r.appspot.com/checkout",
         {
           method: "POST",
           headers: {
