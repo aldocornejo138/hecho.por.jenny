@@ -11,6 +11,19 @@ import {
   p19,
   p20,
 } from "./Images/index.js";
+import {
+  p21,
+  p22,
+  p23,
+  p24,
+  p25,
+  p26,
+  p27,
+  p28,
+  p29,
+  p30,
+  p31,
+} from "./Images/index.js";
 
 const productsData = [
   {
@@ -114,6 +127,91 @@ const productsData = [
     id: "price_1OMEy0I1zNR8sZYD2Przz5fx",
     imageSrc: p17,
     title: "Product 2",
+    price: "149.99",
+  },
+  {
+    id: "price_1OMEvyI1zNR8sZYDu7Iv8yqk",
+    imageSrc: p18,
+    title: "Product 1",
+    price: "149.99",
+  },
+  {
+    id: "price_1OMEy0I1zNR8sZYD2Przz5fx",
+    imageSrc: p19,
+    title: "Product 2",
+    price: "149.99",
+  },
+  {
+    id: "  ",
+    imageSrc: p20,
+    title: "Product 3",
+    price: "149.99",
+  },
+  {
+    id: "  ",
+    imageSrc: p21,
+    title: "Product 4",
+    price: "149.99",
+  },
+  {
+    id: "  ",
+    imageSrc: p22,
+    title: "Product 5",
+    price: "149.99",
+  },
+
+  {
+    id: "price_1OMEvyI1zNR8sZYDu7Iv8yqk",
+    imageSrc: p23,
+    title: "Product 1",
+    price: "149.99",
+  },
+  {
+    id: "price_1OMEy0I1zNR8sZYD2Przz5fx",
+    imageSrc: p24,
+    title: "Product 2",
+    price: "149.99",
+  },
+  {
+    id: "  ",
+    imageSrc: p25,
+    title: "Product 3",
+    price: "149.99",
+  },
+  {
+    id: "  ",
+    imageSrc: p26,
+    title: "Product 4",
+    price: "149.99",
+  },
+  {
+    id: "  ",
+    imageSrc: p27,
+    title: "Product 5",
+    price: "149.99",
+  },
+  {
+    id: "price_1OMEy0I1zNR8sZYD2Przz5fx",
+    imageSrc: p28,
+    title: "Product 2",
+    price: "149.99",
+  },
+  {
+    id: "  ",
+    imageSrc: p29,
+    title: "Product 3",
+    price: "149.99",
+  },
+  {
+    id: "  ",
+    imageSrc: p30,
+    title: "Product 4",
+    price: "149.99",
+  },
+  {
+    id: "  ",
+    imageSrc: p31,
+    title: "Product 5",
     price: "149.99",
   },
 ];
