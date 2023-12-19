@@ -65,7 +65,7 @@ const CartModal = ({ cartItems, onClose, onItemDelete, onQuantityChange }) => {
           </button>
         </div>
         {cartItems.length === 0 ? (
-          <p>No Items In Cart</p>
+          <p>No Items In Cart BETA MODE</p>
         ) : (
           <div>
             <ul>
@@ -127,7 +127,7 @@ const CartModal = ({ cartItems, onClose, onItemDelete, onQuantityChange }) => {
                 variant="success"
                 onClick={checkout}
               >
-                Request
+                Checkout
               </button>
             </div>
           </div>
