@@ -59,13 +59,13 @@ const CartModal = ({ cartItems, onClose, onItemDelete, onQuantityChange }) => {
       <div className="overlayBackground" onClick={onClose} />
       <div className="cart-modal">
         <div className="cart-header">
-          <h2>Items In Cart</h2>
+          <h2>Items In Cart Test/Beta Mode</h2>
           <button className="close-btn" onClick={onClose}>
             Close
           </button>
         </div>
         {cartItems.length === 0 ? (
-          <p>No Items In Cart BETA MODE</p>
+          <p>No Items In Cart</p>
         ) : (
           <div>
             <ul>
