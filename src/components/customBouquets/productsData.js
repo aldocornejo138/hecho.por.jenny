@@ -4,6 +4,8 @@ import { p20, p21, p22, p23, p24, p25, p26, p27, p28 } from "./Images/index.js";
 import { p29, p30, p31, p32, p33, p34, p35, p36, p37 } from "./Images/index.js";
 import { p38, p39, p40, p41, p42, p43, p44, p45, p46 } from "./Images/index.js";
 import { p47, p48, p49, p50, p51, p52, p53, p54, p55 } from "./Images/index.js";
+import { p56, p57, p58, p59, p60, p61, p62, p63, p64 } from "./Images/index.js";
+import { p65, p66, p67, p68, p69, p70, p71, p72 } from "./Images/index.js";
 
 const productsData = [
   {
@@ -330,6 +332,114 @@ const productsData = [
   {
     id: "  ",
     imageSrc: p54,
+    title: "Product 5",
+    price: "149.99",
+  },
+  {
+    id: "  ",
+    imageSrc: p55,
+    title: "Product 3",
+    price: "149.99",
+  },
+  {
+    id: "  ",
+    imageSrc: p56,
+    title: "Product 4",
+    price: "149.99",
+  },
+  {
+    id: "  ",
+    imageSrc: p57,
+    title: "Product 5",
+    price: "149.99",
+  },
+  {
+    id: "price_1OMEy0I1zNR8sZYD2Przz5fx",
+    imageSrc: p58,
+    title: "Product 2",
+    price: "149.99",
+  },
+  {
+    id: "  ",
+    imageSrc: p59,
+    title: "Product 3",
+    price: "149.99",
+  },
+  {
+    id: "  ",
+    imageSrc: p60,
+    title: "Product 4",
+    price: "149.99",
+  },
+  {
+    id: "  ",
+    imageSrc: p61,
+    title: "Product 5",
+    price: "149.99",
+  },
+  {
+    id: "  ",
+    imageSrc: p62,
+    title: "Product 4",
+    price: "149.99",
+  },
+  {
+    id: "  ",
+    imageSrc: p63,
+    title: "Product 5",
+    price: "149.99",
+  },
+  {
+    id: "  ",
+    imageSrc: p64,
+    title: "Product 3",
+    price: "149.99",
+  },
+  {
+    id: "  ",
+    imageSrc: p65,
+    title: "Product 4",
+    price: "149.99",
+  },
+  {
+    id: "  ",
+    imageSrc: p66,
+    title: "Product 5",
+    price: "149.99",
+  },
+  {
+    id: "  ",
+    imageSrc: p67,
+    title: "Product 4",
+    price: "149.99",
+  },
+  {
+    id: "  ",
+    imageSrc: p68,
+    title: "Product 5",
+    price: "149.99",
+  },
+  {
+    id: "  ",
+    imageSrc: p69,
+    title: "Product 5",
+    price: "149.99",
+  },
+  {
+    id: "  ",
+    imageSrc: p70,
+    title: "Product 4",
+    price: "149.99",
+  },
+  {
+    id: "  ",
+    imageSrc: p71,
+    title: "Product 5",
+    price: "149.99",
+  },
+  {
+    id: "  ",
+    imageSrc: p72,
     title: "Product 5",
     price: "149.99",
   },
