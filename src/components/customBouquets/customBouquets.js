@@ -255,6 +255,10 @@ const CustomBouquets = () => {
         />
       )}
       <Products addToCart={addToCart} />
+      <br />
+      <br />
+      <br />
+      <br />
       <footer className="Footer">
         <div className="footer-content">
           <div className="left-content">
