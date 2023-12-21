@@ -29,7 +29,7 @@ const productsData = [
     id: "price_1OPqxVI1zNR8sZYDMNtpMmh6",
     imageSrc: p74,
     title: "Virgin Maria",
-    price: "199.99",
+    price: "149.99",
   },
 
   {
