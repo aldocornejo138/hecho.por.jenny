@@ -9,19 +9,19 @@ import { p65, p66, p67, p68, p69, p70, p71, p72, p73 } from "./Images/index.js";
 
 const productsData = [
   {
-    id: "price_1OMEvyI1zNR8sZYDu7Iv8yqk",
+    id: "price_1OPpNlI1zNR8sZYDlf1fyOxc",
     imageSrc: p73,
     title: "Custom Design",
     price: "199.99",
   },
   {
-    id: "price_1OMEvyI1zNR8sZYDu7Iv8yqk",
+    id: "price_1OMEy0I1zNR8sZYD2Przz5fx",
     imageSrc: p1,
     title: "Como Tu No Hay Otra",
     price: "149.99",
   },
   {
-    id: "price_1OMEy0I1zNR8sZYD2Przz5fx",
+    id: "price_1OPpPgI1zNR8sZYDZwOqYbbu",
     imageSrc: p2,
     title: "Anniversary White",
     price: "149.99",
