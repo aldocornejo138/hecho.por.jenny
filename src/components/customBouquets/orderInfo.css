@@ -1,0 +1,59 @@
+.Fancy_Title {
+  text-align: center;
+  position: fixed;
+  left: 40%;
+  font-family: cursive;
+  font-size: 2rem;
+  color: #ffffff;
+  z-index: 10;
+  margin-top: -85px;
+}
+
+/* Set a smaller font size for the product details */
+.orderDetails {
+  font-size: 14px;
+  color: white;
+  margin-top: -50px;
+}
+
+/* Style the order item */
+.orderItem {
+  display: flex;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+}
+
+/* Style the item info */
+.itemInfo {
+  display: flex;
+  align-items: center;
+}
+
+/* Style the image */
+.miniatureImage {
+  width: 80px; /* Adjust the size as needed */
+  height: 80px;
+  margin-right: 10px;
+  border-radius: 25px;
+}
+
+/* Style the text */
+.itemTitle,
+.itemPrice,
+.itemQuantity {
+  margin: 10px;
+  color: white;
+}
+@media only screen and (max-width: 858px) {
+  .Fancy_Title {
+    text-align: center;
+    top: -80px;
+    left: 7%;
+    font-family: cursive; /* Use cursive font-family */
+    font-size: 2rem;
+    width: auto; /* Adjust the font size as needed */
+    color: #ffffff; /* Text color */
+    margin-top: -10px;
+  }
+}

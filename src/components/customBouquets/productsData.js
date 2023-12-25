@@ -16,6 +16,8 @@ import {
   p72,
   p73,
   p74,
+  p75,
+  p76,
 } from "./Images/index.js";
 
 const productsData = [
@@ -25,6 +27,19 @@ const productsData = [
     title: "Custom Design",
     price: "199.99",
   },
+  {
+    id: "price_1ORHBgI1zNR8sZYDlD9udAEw",
+    imageSrc: p76,
+    title: "100 Roses",
+    price: "149.99",
+  },
+  {
+    id: "price_1ORHAXI1zNR8sZYDC0bzg1lu",
+    imageSrc: p75,
+    title: "The Grinch",
+    price: "149.99",
+  },
+
   {
     id: "price_1OPqxVI1zNR8sZYDMNtpMmh6",
     imageSrc: p74,

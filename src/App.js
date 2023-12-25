@@ -7,6 +7,7 @@ import Proposal from "./components/proposal/Proposal.js";
 import Contact from "./components/contact/Contact.js";
 import SuccessPage from "./components/success/SuccessPage.js";
 import CancelPage from "./components/customBouquets/cancel/CancelPage.js";
+import OrderInfo from "./components/customBouquets/orderInfo.js";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/Contact" element={<Contact />} />
         <Route path="/Success" element={<SuccessPage />} />
         <Route path="/Cancel" element={<CancelPage />} />
+        <Route path="/OrderDetails" element={<OrderInfo />} />
       </Routes>
     </div>
   );

@@ -72,6 +72,8 @@ import p71 from "./p71.jpg";
 import p72 from "./p72.jpg";
 import p73 from "./p73.jpg";
 import p74 from "./p74.jpg";
+import p75 from "./p75.jpg";
+import p76 from "./p76.jpg";
 
 export { p1 };
 export { p2 };
@@ -147,3 +149,5 @@ export { p71 };
 export { p72 };
 export { p73 };
 export { p74 };
+export { p75 };
+export { p76 };
