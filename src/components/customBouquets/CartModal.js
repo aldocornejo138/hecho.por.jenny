@@ -1,8 +1,11 @@
 // CartModal.js
 import React from "react";
-import "./CartModal.css"; // Import your modal styles
+import { useNavigate } from "react-router-dom";
+import "./CartModal.css";
 
 const CartModal = ({ cartItems, onClose, onItemDelete, onQuantityChange }) => {
+  const navigate = useNavigate();
+
   const handleDelete = (index) => {
     onItemDelete(index);
   };
@@ -30,30 +33,13 @@ const CartModal = ({ cartItems, onClose, onItemDelete, onQuantityChange }) => {
     return totalPrice;
   };
 
-  const checkout = async () => {
-    try {
-      const response = await fetch(
-        "https://hechoporjenny-backend.wl.r.appspot.com/checkout",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ cartItems }),
-        }
-      );
-
-      const data = await response.json();
-
-      if (response.ok) {
-        window.location.assign(data.url);
-      } else {
-        console.error(`Error: ${data.error}`);
-      }
-    } catch (error) {
-      console.error("Error fetching data:", error);
-    }
+  const goToOrderInfo = () => {
+    // Scroll to the top of the page
+    window.scrollTo(0, 0);
+    // Navigate to OrderInfo component and pass cartItems as state
+    navigate("/orderDetails", { state: { cartItems } });
   };
+
   return (
     <div>
       <div className="overlayBackground" onClick={onClose} />
@@ -125,7 +111,7 @@ const CartModal = ({ cartItems, onClose, onItemDelete, onQuantityChange }) => {
               <button
                 className="checkout-btn"
                 variant="success"
-                onClick={checkout}
+                onClick={goToOrderInfo}
               >
                 Checkout
               </button>

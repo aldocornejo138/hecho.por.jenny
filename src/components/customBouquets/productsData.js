@@ -5,20 +5,8 @@ import { p29, p30, p31, p32, p33, p34, p35, p36, p37 } from "./Images/index.js";
 import { p38, p39, p40, p41, p42, p43, p44, p45, p46 } from "./Images/index.js";
 import { p47, p48, p49, p50, p51, p52, p53, p54, p55 } from "./Images/index.js";
 import { p56, p57, p58, p59, p60, p61, p62, p63, p64 } from "./Images/index.js";
-import {
-  p65,
-  p66,
-  p67,
-  p68,
-  p69,
-  p70,
-  p71,
-  p72,
-  p73,
-  p74,
-  p75,
-  p76,
-} from "./Images/index.js";
+import { p65, p66, p67, p68, p69, p70, p71, p72, p73 } from "./Images/index.js";
+import { p74, p75, p76 } from "./Images/index.js";
 
 const productsData = [
   {
