@@ -1,5 +1,5 @@
 // OrderInfo.js
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useInView } from "react-intersection-observer";
 import "./orderInfo.css";
@@ -38,7 +38,6 @@ const OrderInfo = () => {
   const [message, setMessage] = useState("");
   const [errMsg, setErrMsg] = useState("");
   const [successMsg, setSuccessMsg] = useState("");
-  const [itemInfo, setItemInfo] = useState([]);
 
   const emailValidation = () => {
     return String(user_email)
@@ -46,23 +45,10 @@ const OrderInfo = () => {
       .match(/^\w+([.-]?\w+)*@\w+([-]?\w+)*(\.\w{2,3})+$/);
   };
 
-  // Update the hidden fields based on cart items
-  const updatedItemInfo = cartItems.map((item) => ({
-    imageSrc: item.imageSrc || "",
-    title: item.title || "",
-    price: item.price || "",
-    quantity: item.quantity || "",
-  }));
-
-  // Update the state with the new item information
-  useEffect(() => {
-    setItemInfo(updatedItemInfo);
-  }, [updatedItemInfo]);
-
   const handleSend = async (e) => {
     e.preventDefault();
     if (user_name === "") {
-      setErrMsg("Username is required!!");
+      setErrMsg("A Name is required!!");
     } else if (phoneNumber === "") {
       setErrMsg("Phone number is required!");
     } else if (user_email === "") {
@@ -82,7 +68,7 @@ const OrderInfo = () => {
         );
 
         setSuccessMsg(
-          `Thank you ${user_name}, Your Message has been sent Successfully!`
+          `Thank you ${user_name}, Your Bouquet Order has been sent Successfully!`
         );
         setErrMsg("");
         setUsername("");
@@ -90,7 +76,6 @@ const OrderInfo = () => {
         setEmail("");
         setDeliveryDate("");
         setMessage("");
-        setItemInfo([]); // Reset order information after sending
       } catch (error) {
         console.error("Error sending email:", error);
         setErrMsg("Error sending email. Please try again.");
@@ -132,9 +117,81 @@ const OrderInfo = () => {
         ref={ref}
         className={`fancyContainer ${inView ? "zoomIn" : "zoomOut"}`}
       >
-        {/* ... (rest of the fancyContainer code) ... */}
+        <div className="Fancy_Title">
+          <h1>Hecho Por Jenny</h1>
+        </div>
+        <div className=" svgLineContainer">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="347"
+            height="80"
+            version="1.1"
+          >
+            <path id="textPath" d="M 10 50 H 400" fill="transparent" />
+            <text className="cursive-text">
+              <textPath href="#textPath">
+                <animateMotion repeatCount="indefinite">
+                  <mpath
+                    href="#textPath"
+                    keyPoints="0;1;0"
+                    keyTimes="0;0.5;1"
+                    dur="4s"
+                  />
+                </animateMotion>
+                Hecho Por Jenny
+              </textPath>
+            </text>
+          </svg>
+        </div>
+
+        <div className="svgFlower">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="400"
+            height="40"
+            version="1.1"
+          >
+            <path
+              id="line"
+              d="M 10 20 C 100 5, 150 35, 350 20"
+              fill="none"
+              strokeWidth="3.5"
+              strokeDasharray="200 300"
+              strokeLinecap="round"
+            >
+              <animate
+                attributeName="stroke-dashoffset"
+                from="0"
+                to="500"
+                dur="8s"
+                repeatCount="indefinite"
+              />
+            </path>
+
+            <path
+              id="inverseLine"
+              d="M 350 20 C 250 35, 200 5, 10 20"
+              fill="none"
+              stroke-width="4"
+              stroke-dasharray="200 300"
+              stroke-linecap="round"
+            >
+              <animate
+                attributeName="stroke-dashoffset"
+                from="-500"
+                to="0"
+                dur="8s"
+                repeatCount="indefinite"
+              />
+            </path>
+          </svg>
+        </div>
       </div>
-      <div className="orderDetails">
+
+      <div
+        ref={ref}
+        className={`orderDetails ${inView ? "zoomIn" : "zoomOut"}`}
+      >
         <h2>Order Details</h2>
         {cartItems.length === 0 ? (
           <p>No Items In Order</p>
@@ -268,8 +325,8 @@ const OrderInfo = () => {
           <input type="hidden" name="total" value={calculateTotalPrice()} />
 
           <div className="full-width">
-            <button onClick={handleSend} className="send-button">
-              Send Message
+            <button onClick={handleSend} className="orderButton">
+              Send Request
             </button>
           </div>
           {errMsg && <p className="error-msg">{errMsg}</p>}

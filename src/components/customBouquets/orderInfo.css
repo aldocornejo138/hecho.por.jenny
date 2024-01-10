@@ -36,6 +36,7 @@
   height: 80px;
   margin-right: 10px;
   border-radius: 25px;
+  margin-left: 25px;
 }
 
 /* Style the text */
@@ -43,8 +44,23 @@
 .itemPrice,
 .itemQuantity {
   margin: 10px;
+  color: rgb(251, 251, 251);
+  margin-left: 8px;
+}
+
+.orderButton {
+  position: relative;
+  font-size: 22px;
+  padding: 10px 20px;
+  background: linear-gradient(90deg, #f04adf, rgb(233, 100, 233), #f04adf);
+  border-radius: 25px;
+}
+
+.desContainer {
+  margin-top: 25px;
   color: white;
 }
+
 @media only screen and (max-width: 858px) {
   .Fancy_Title {
     text-align: center;
