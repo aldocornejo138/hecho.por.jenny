@@ -13,7 +13,7 @@ const OrderInfo = () => {
   const cartItems = location.state?.cartItems || [];
 
   const { ref, inView } = useInView({
-    triggerOnce: false,
+    triggerOnce: true,
   });
 
   const Title = ({ title, subtitle }) => {
