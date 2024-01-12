@@ -18,7 +18,7 @@ const OrderInfo = () => {
 
   const Title = ({ title, subtitle }) => {
     const { ref, inView } = useInView({
-      triggerOnce: false,
+      triggerOnce: true,
     });
 
     return (
@@ -59,6 +59,9 @@ const OrderInfo = () => {
       setErrMsg("Please give your Delivery Date");
     } else {
       try {
+        // Log the total value
+        console.log("Total before sending:", calculateTotalPrice());
+
         // Send the email using the form data and the updated itemInfo
         await emailjs.sendForm(
           "service_p0jbhyl",
@@ -99,6 +102,16 @@ const OrderInfo = () => {
 
     return totalPrice.toFixed(2);
   };
+  // Helper function to format order items
+  const formatOrderItems = () => {
+    return cartItems
+      .map(
+        (item, index) =>
+          `Name of Bouquet: ${item.title}\nPrice: $${item.price}\nQuantity: ${item.quantity}`
+      )
+      .join("\n\n");
+  };
+
   return (
     <section className="main">
       <div className="head">
@@ -307,23 +320,9 @@ const OrderInfo = () => {
               rows="8"
             ></textarea>
           </div>
-
-          {/* Order Information Fields */}
-          {cartItems.map((item, index) => (
-            <div key={index} className="hidden-item-info">
-              <input type="hidden" name="imgSrc" value={item.imageSrc || ""} />
-              <input type="hidden" name="title" value={item.title || ""} />
-              <input type="hidden" name="price" value={item.price || ""} />
-              <input
-                type="hidden"
-                name="quantity"
-                value={item.quantity || ""}
-              />
-              {/* Add more hidden fields for other item details if needed */}
-            </div>
-          ))}
           <input type="hidden" name="total" value={calculateTotalPrice()} />
-
+          {/* Order Information Fields */}
+          <input type="hidden" name="orderItems" value={formatOrderItems()} />
           <div className="full-width">
             <button onClick={handleSend} className="orderButton">
               Send Request
