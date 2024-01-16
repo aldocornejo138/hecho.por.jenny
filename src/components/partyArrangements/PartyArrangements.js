@@ -325,7 +325,7 @@ const PartyArrangements = () => {
       <footer className="Footer">
         <div className="footer-content">
           <div className="left-content">
-            <h1>Hecho Por Jenny &copy; 2023</h1>
+            <h1>Hecho Por Jenny &copy; 2024</h1>
           </div>
           <div className="right-content">
             <a
