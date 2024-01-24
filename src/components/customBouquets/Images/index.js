@@ -1,5 +1,5 @@
-import p1 from "./p1.jpg";
 import p2 from "./p2.jpg";
+import p3 from "./p3.jpg";
 import p4 from "./p4.jpg";
 import p5 from "./p5.jpg";
 import p6 from "./p6.jpg";
@@ -28,7 +28,7 @@ import p27 from "./p27.jpg";
 import p29 from "./p29.jpg";
 import p30 from "./p30.jpg";
 import p31 from "./p31.jpg";
-import p32 from "./p32.jpg";
+
 import p33 from "./p33.jpg";
 
 import p36 from "./p36.jpg";
@@ -43,31 +43,25 @@ import p45 from "./p45.jpg";
 
 import p47 from "./p47.jpg";
 
-import p49 from "./p49.jpg";
-
 import p51 from "./p51.jpg";
+
 import p53 from "./p53.jpg";
 
-import p56 from "./p56.jpg";
 import p57 from "./p57.jpg";
 
-import p59 from "./p59.jpg";
 import p60 from "./p60.jpg";
-import p61 from "./p16.jpg";
+
 import p62 from "./p62.jpg";
 import p63 from "./p63.jpg";
 import p64 from "./p64.jpg";
 
 import p66 from "./p66.jpg";
-import p67 from "./p67.jpg";
-import p68 from "./p68.jpg";
-import p69 from "./p69.jpg";
+
 import p70 from "./p70.jpg";
-import p71 from "./p71.jpg";
-import p72 from "./p72.jpg";
+
 import p73 from "./p73.jpg";
 import p74 from "./p74.jpg";
-
+import p75 from "./p75.jpg";
 import p76 from "./p76.jpg";
 import p77 from "./p77.jpg";
 import p78 from "./p78.jpg";
@@ -81,9 +75,8 @@ import p85 from "./p85.jpg";
 import p86 from "./p86.jpg";
 import p87 from "./p87.jpg";
 
-export { p1 };
 export { p2 };
-
+export { p3 };
 export { p4 };
 export { p5 };
 export { p6 };
@@ -107,12 +100,12 @@ export { p23 };
 export { p24 };
 export { p25 };
 export { p26 };
-
 export { p27 };
+
 export { p29 };
 export { p30 };
 export { p31 };
-export { p32 };
+
 export { p33 };
 
 export { p36 };
@@ -127,34 +120,26 @@ export { p45 };
 
 export { p47 };
 
-export { p49 };
-
 export { p51 };
 
 export { p53 };
 
-export { p56 };
 export { p57 };
 
-export { p59 };
 export { p60 };
-export { p61 };
+
 export { p62 };
 export { p63 };
 export { p64 };
 
 export { p66 };
-export { p67 };
-export { p68 };
-export { p69 };
+
 export { p70 };
-export { p71 };
-export { p72 };
+
 export { p73 };
 export { p74 };
-
+export { p75 };
 export { p76 };
-
 export { p77 };
 export { p78 };
 export { p79 };
