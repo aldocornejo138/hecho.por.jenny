@@ -241,7 +241,7 @@ const OrderInfo = () => {
       </div>
 
       <Title
-        title="Shipping Address"
+        title="Customer Information"
         subtitle="Special Request? Leave a note :)"
       />
       <br />
