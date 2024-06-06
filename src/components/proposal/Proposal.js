@@ -329,7 +329,7 @@ const Proposal = () => {
           </div>
           <div className="right-content">
             <a
-              href="https://yourpersonalwebdev.com/"
+              href="https://www.seodevleads.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
