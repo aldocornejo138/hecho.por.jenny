@@ -309,6 +309,7 @@ const Contact = () => {
             <h1>Hecho Por Jenny &copy; 2024</h1>
           </div>
           <div className="right-content">
+            Powered By:
             <a
               href="https://www.seodevleads.com/"
               target="_blank"
