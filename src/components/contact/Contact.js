@@ -315,7 +315,7 @@ const Contact = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <h1>Site Design</h1>
+              <h1>SEODevLeads.com</h1>
             </a>
           </div>
         </div>

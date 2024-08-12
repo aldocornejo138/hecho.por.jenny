@@ -176,12 +176,12 @@ img {
 .right-content a {
   text-decoration: none;
   color: rgba(225, 40, 216, 0.628);
-  font-size: 10px;
+  font-size: 13px;
   font-family: cursive;
 }
 
 .right-content a:hover {
-  font-size: 11px;
+  font-size: 15px;
   color: rgb(255, 0, 255);
 }
 
