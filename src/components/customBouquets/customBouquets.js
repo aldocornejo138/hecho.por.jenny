@@ -267,11 +267,11 @@ const CustomBouquets = () => {
           <div className="right-content">
             Powered By:
             <a
-              href="https://www.seodevleads.com/"
+              href="https://aldahir-cornejo-portfolio.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <h1>SEODevLeads.com</h1>
+              <h1>Aladahir Cornejo</h1>
             </a>
           </div>
         </div>
