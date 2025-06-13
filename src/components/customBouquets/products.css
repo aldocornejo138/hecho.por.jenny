@@ -75,9 +75,9 @@
 .overlay__container {
   background-color: rgba(255, 255, 255, 0);
   position: fixed;
-  top: 50%; /* Center the overlay vertically */
-  left: 50%; /* Center the overlay horizontally */
-  transform: translate(-50%, -50%); /* Center the overlay */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 999;
   padding: 30px;
   width: 500px;
@@ -85,8 +85,8 @@
   text-align: center;
   border-radius: 50px;
   transition: background-color 0.3s ease-in-out, transform 0.5s ease-in-out;
-  opacity: 0; /* Initially set the opacity to 0 to create a fade-in effect */
-  transition-delay: 0.1s; /* Add a delay to the transition */
+  opacity: 0;
+  transition-delay: 0.1s;
   text-align: center;
 }
 
@@ -135,7 +135,8 @@
   color: #fff;
   background: linear-gradient(90deg, #f04adf, rgb(244, 155, 244), #f04adf);
   background-size: 200% 100%;
-  animation: shine 7s linear infinite, fancy 1s ease-in-out infinite alternate;
+  animation: shine 7s linear infinite,
+    zoomInnOut 1s ease-in-out infinite alternate;
 }
 
 .product-details-button:hover {
@@ -154,7 +155,7 @@
   }
 }
 
-@keyframes fancy {
+@keyframes zoomInnOut {
   0% {
     transform: scale(1);
   }
