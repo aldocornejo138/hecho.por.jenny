@@ -140,11 +140,11 @@ function Hero() {
             <div className="right-content">
               Powered By:
               <a
-                href="https://aldahir-cornejo-portfolio.vercel.app/"
+                href="https://www.seodevleads.com/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <h1>Aldahir Cornejo</h1>
+                <h1>SEODevLeads.com</h1>
               </a>
             </div>
           </div>
